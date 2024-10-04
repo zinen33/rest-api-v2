@@ -1805,30 +1805,38 @@ body.sidebar-toggled footer.sticky-footer {
 .text-primary-custom {
     color: #4e73df;
 }
+
 .img-profile {
     width: 40px;
     height: 40px;
 }
+
 .card-body .card {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s ease;
+    border-radius: 0; /* Remove curve */
 }
+
 .card-body .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
 .card-body .card .card-body {
     padding: 1.5rem;
 }
+
 .card-body .card .card-title {
     font-weight: bold;
     margin-bottom: 1rem;
 }
+
 .card-body .card .card-text {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 /* custom.css */
 body {
     background-color: #0f172a;
@@ -1841,6 +1849,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    border-radius: 0; /* Remove curve */
 }
 
 .card-body {
@@ -1883,14 +1892,10 @@ body {
     color: #3b82f6 !important;
 }
 
-.sidebar, .topbar {
+.sidebar {
     background-color: #1e293b;
 }
 
 .sidebar .nav-item .nav-link {
     color: #94a3b8;
-}
-
-.topbar .nav-item .nav-link {
-    color: white;
 }
