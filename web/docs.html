@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Ajiro Rest API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css"/>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/default.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .card {
+            /* All border-related properties removed */
+            background-color: transparent;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .welcome-card {
+            background-color: #f8f9fa;
+        }
+        .stats-card {
+            background-color: #ffffff;
+        }
+        .stats-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .stats-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        /* Styles for centering without changing card sizes */
+        .container-fluid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body id="page-top" class="dark-mode">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+            <div class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-text mx-3 text-primary-custom">Ajiro Rest APIs</div>
+            </div>
+            <hr class="sidebar-divider my-0">
+            <!-- Dynamic sidebar items will be inserted here -->
+        </ul>
+        <!-- Sidebar -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- TopBar -->
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle" src="https://i.imgur.com/xwCoQ5H.jpeg" style="width: 40px; height: 40px;">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Topbar -->
+
+                <!-- Container Fluid-->
+                <div class="container-fluid" id="container-wrapper">
+                    <div class="row mb-3">
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card welcome-card">
+                                <div class="card-body py-5">
+                                    <h2 class="card-title text-primary-custom mb-4">Welcome to Ajiro Rest API</h2>
+                                    <p class="mb-0">Explore our APIs by clicking on the categories in the sidebar to find the one you need.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- API Stats Cards -->
+                    <div class="row mb-3">
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card stats-card h-100">
+                                <div class="card-body py-4 text-center">
+                                    <i class="fas fa-server card-icon text-primary-custom"></i>
+                                    <h5 class="stats-title text-primary-custom mb-3">Available Endpoints</h5>
+                                    <p class="stats-value mb-0" id="totalApis">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card stats-card h-100">
+                                <div class="card-body py-4 text-center">
+                                    <i class="fas fa-list-alt card-icon text-primary-custom"></i>
+                                    <h5 class="stats-title text-primary-custom mb-3">Categories</h5>
+                                    <p class="stats-value mb-0" id="apiCategories">Loading...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---Container Fluid-->
+            </div>
+            <!-- Footer -->
+            <footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        Made with <i class="fa fa-heart faa-flash animated"></i> by
+                        <a href="https://github.com/siputzx" target="_blank" style="color: #fff;">Lance Ajiro</a>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer -->
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/ruang-admin.min.js"></script>
+    <script src="js/tampilan.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
