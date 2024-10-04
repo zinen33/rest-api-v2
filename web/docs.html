@@ -13,36 +13,6 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/default.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        .card {
-            /* All border-related properties removed */
-            background-color: transparent;
-        }
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .welcome-card {
-            background-color: #f8f9fa;
-        }
-        .stats-card {
-            background-color: #ffffff;
-        }
-        .stats-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        .stats-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-        /* Styles for centering without changing card sizes */
-        .container-fluid {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body id="page-top" class="dark-mode">
@@ -90,20 +60,20 @@
                     <!-- API Stats Cards -->
                     <div class="row mb-3">
                         <div class="col-xl-6 col-md-6 mb-4">
-                            <div class="card stats-card h-100">
-                                <div class="card-body py-4 text-center">
-                                    <i class="fas fa-server card-icon text-primary-custom"></i>
-                                    <h5 class="stats-title text-primary-custom mb-3">Available Endpoints</h5>
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="stats-title">AVAILABLE ENDPOINTS</h6>
                                     <p class="stats-value mb-0" id="totalApis">Loading...</p>
+                                    <i class="fas fa-server card-icon"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-6 col-md-6 mb-4">
-                            <div class="card stats-card h-100">
-                                <div class="card-body py-4 text-center">
-                                    <i class="fas fa-list-alt card-icon text-primary-custom"></i>
-                                    <h5 class="stats-title text-primary-custom mb-3">Categories</h5>
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h6 class="stats-title">CATEGORIES</h6>
                                     <p class="stats-value mb-0" id="apiCategories">Loading...</p>
+                                    <i class="fas fa-list-alt card-icon"></i>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +86,7 @@
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         Made with <i class="fa fa-heart faa-flash animated"></i> by
-                        <a href="https://github.com/siputzx" target="_blank" style="color: #fff;">Lance Ajiro</a>
+                        <a href="https://github.com/ajirodesu" target="_blank" style="color: #3b82f6;">Lance Ajiro</a>
                     </div>
                 </div>
             </footer>
