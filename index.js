@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const log = require("./function/log")
 const config = require("./config.json");
 
 global.config = config;
@@ -33,5 +34,5 @@ app.get("*", (req, res) => {
 const PORT = process.env.PORT || global.config.port || 3000;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  log.main(`Server is running on port ${PORT}`);
 });

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { readdirSync } = require('fs-extra');
 const path = require('path');
-const { green, blue, cyan } = require('kleur');
+const log = require('./log');
 const compression = require('compression');
 const srcPath = path.join(__dirname, "/scraper/");
 
@@ -27,16 +27,21 @@ apiCache.forEach((api, name) => {
   const routePath = `/api/${name}`;
   router.get(routePath, async (req, res) => {
     try {
-      await api.initialize({ req, res });
+      await api.initialize({ req, res, log });
     } catch (error) {
-      res.status(500).send("Error occurred");
+      console.error(`Error in ${name} API:`, error);
+      res.status(500).send("An error occurred");
     }
   });
-  global.api.set(name, api);
+  if (global.api && global.api instanceof Map) {
+    global.api.set(name, api);
+  } else {
+    console.warn("global.api is not a Map. Skipping setting API in global scope.");
+  }
   n++;
-  console.log(`${green('[ Ajiro ]')} ${cyan('→')} ${blue(`Successfully loaded ${name}`)}`);
+  log.main(`Successfully loaded ${name}`);
 });
 
-console.log(`${green('[ Ajiro ]')} ${cyan('→')} ${blue(`Successfully loaded ${n} API`)}`);
+  log.main(`Successfully loaded ${n} API${n !== 1 ? 's' : ''}`);
 
 module.exports = router;
