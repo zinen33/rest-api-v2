@@ -5,86 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ajiro Rest API</title>
+  <title id="page-title"></title>
   <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    .project-item {
-      background: #222222;
-      border-radius: 12px;
-      padding: 20px;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-    .project-title {
-      color: white;
-      font-size: 24px;
-      font-weight: 600;
-      margin: 0 0 8px 0;
-    }
-    .project-category {
-      color: #808080;
-      font-size: 16px;
-      margin: 0 0 16px 0;
-    }
-    .project-method {
-      color: #FFD700;
-      font-size: 14px;
-      font-weight: 500;
-      margin: 0 0 16px 0;
-    }
-    .try-button {
-      background: #FFD700;
-      color: black;
-      border: none;
-      border-radius: 6px;
-      padding: 8px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    .try-button:hover {
-      background: #FFC800;
-    }
-    /* Loading Animation Styles */
-    .loader-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #222222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    .loader {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #FFD700;
-      border-top: 5px solid transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .content {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-    .content.visible {
-      opacity: 1;
-    }
-  </style>
 </head>
 
 <body>
@@ -101,8 +27,8 @@
           </figure>
 
           <div class="info-content">
-            <h1 class="name" title="Ajiro API">Ajiro API</h1>
-            <p class="title">Rest API by Lance Ajiro</p>
+            <h1 class="name" id="api-name"></h1>
+            <p class="title" id="api-description"></p>
           </div>
 
           <button class="info_more-btn" data-sidebar-btn>
@@ -120,7 +46,7 @@
               </div>
               <div class="contact-info">
                 <p class="contact-title">Email</p>
-                <a href="mailto: lanceaaronwazzup@gmail.com" class="contact-link">lanceaaronwazzup@gmail.com</a>
+                <a href="#" id="email-link" class="contact-link"></a>
               </div>
             </li>
             <li class="contact-item">
@@ -129,7 +55,7 @@
               </div>
               <div class="contact-info">
                 <p class="contact-title">Phone</p>
-                <a href="tel:N/A" class="contact-link">N/A</a>
+                <a href="#" id="phone-link" class="contact-link"></a>
               </div>
             </li>
             <li class="contact-item">
@@ -138,7 +64,7 @@
               </div>
               <div class="contact-info">
                 <p class="contact-title">Birthday</p>
-                <time datetime="2005-05-17">May 17, 2005</time>
+                <time id="birthday"></time>
               </div>
             </li>
             <li class="contact-item">
@@ -147,29 +73,29 @@
               </div>
               <div class="contact-info">
                 <p class="contact-title">Location</p>
-                <address>Calauag, Quezon, Philippines</address>
+                <address id="location"></address>
               </div>
             </li>
           </ul>
           <div class="separator"></div>
           <ul class="social-list">
             <li class="social-item">
-              <a href="https://www.facebook.com/lance.cochangco" class="social-link">
+              <a href="#" id="facebook-link" class="social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
             </li>
             <li class="social-item">
-              <a href="https://github.com/lancecochangco" class="social-link">
+              <a href="#" id="github-link" class="social-link">
                 <ion-icon name="logo-github"></ion-icon>
               </a>
             </li>
             <li class="social-item">
-              <a href="https://x.com/lanceajiro" class="social-link">
+              <a href="#" id="twitter-link" class="social-link">
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
             <li class="social-item">
-              <a href="#" class="social-link">
+              <a href="#" id="linkedin-link" class="social-link">
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
@@ -191,20 +117,12 @@
 
         <article class="about active" data-page="about">
           <header>
-            <h2 class="h2 article-title">About Ajiro Rest API</h2>
+            <h2 class="h2 article-title" id="about-title"></h2>
           </header>
 
           <section class="about-text">
-            <p>
-              Welcome to Ajiro Rest API, a powerful and flexible REST API service designed to meet your data needs. 
-              Our API provides easy access to a wide range of endpoints, allowing you to integrate diverse functionalities 
-              into your applications seamlessly.
-            </p>
-            <p>
-              Whether you're building web applications, mobile apps, or data-driven services, Ajiro Rest API offers 
-              robust solutions to enhance your development process. Explore our endpoints to discover how we can 
-              help you create more efficient and feature-rich applications.
-            </p>
+            <p id="about-text-1"></p>
+            <p id="about-text-2"></p>
           </section>
         </article>
 
@@ -247,71 +165,6 @@
   <script src="js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetchAPIList();
-    });
-
-    async function fetchAPIList() {
-      try {
-        showLoader();
-        const response = await fetch('/api-list');
-        const apis = await response.json();
-        displayAPIs(apis);
-        setupCategoryFilter(apis);
-      } catch (error) {
-        console.error('Error fetching API list:', error);
-      } finally {
-        hideLoader();
-      }
-    }
-
-    function displayAPIs(apis) {
-      const apiList = document.getElementById('api-list');
-      apiList.innerHTML = '';
-
-      apis.forEach(api => {
-        const listItem = document.createElement('li');
-        listItem.className = 'project-item active';
-        listItem.setAttribute('data-filter-item', '');
-        listItem.setAttribute('data-category', api.category.toLowerCase());
-
-        listItem.innerHTML = `
-          <h3 class="project-title">${api.name}</h3>
-          <p class="project-category">${api.description}</p>
-          <p class="project-method">${'GET'}</p>
-          <button class="try-button" onclick="tryAPI('${api.link[0]}')">Try it out</button>
-        `;
-
-        apiList.appendChild(listItem);
-      });
-    }
-
-    function tryAPI(apiLink) {
-      // Navigate to the API without showing the loader
-      window.location.href = `/api${apiLink}`;
-    }
-
-    function showLoader() {
-      document.getElementById('loader').style.display = 'flex';
-      document.getElementById('content').classList.remove('visible');
-    }
-
-    function hideLoader() {
-      document.getElementById('loader').style.display = 'none';
-      document.getElementById('content').classList.add('visible');
-    }
-
-    // Check if this is the main page
-    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-      // Show loader on initial page load
-      showLoader();
-    } else {
-      // Hide loader and show content immediately on other pages
-      hideLoader();
-    }
-  </script>
 </body>
 
 </html>

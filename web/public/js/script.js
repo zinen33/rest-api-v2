@@ -1,5 +1,9 @@
 'use strict';
 
+// Global configuration object
+let config;
+let apis = [];
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -23,7 +27,7 @@ function capitalizeFirstLetter(string) {
 function handleCategorySelection(selectedValue, element) {
   // Update select value display with capitalized text
   selectValue.innerText = selectedValue === 'all' ? 'Select category' : capitalizeFirstLetter(selectedValue);
-  
+
   // Apply filter to items
   const filterItems = document.querySelectorAll("[data-filter-item]");
   filterItems.forEach(item => {
@@ -119,16 +123,10 @@ function displayAPIs(apis) {
     listItem.setAttribute('data-category', api.category.toLowerCase());
 
     listItem.innerHTML = `
-      <a href="${api.link[0]}">
-        <figure class="project-img">
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-          <img src="images/api-default.jpg" alt="${api.name}" loading="lazy">
-        </figure>
-        <h3 class="project-title">${api.name}</h3>
-        <p class="project-category">${capitalizeFirstLetter(api.category)}</p>
-      </a>
+      <h3 class="project-title">${api.name}</h3>
+      <p class="project-category">${api.description}</p>
+      <p class="project-method">${'GET'}</p>
+      <button class="try-button" onclick="tryAPI('${api.link[0]}')">Try it out</button>
     `;
 
     apiList.appendChild(listItem);
@@ -152,4 +150,80 @@ navigationLinks.forEach((link, index) => {
       }
     });
   });
+});
+
+// Function to try API
+function tryAPI(apiLink) {
+  // Navigate to the API without showing the loader
+  window.location.href = `/api${apiLink}`;
+}
+
+// Functions for loading and displaying content
+function showLoader() {
+  document.getElementById('loader').style.display = 'flex';
+  document.getElementById('content').classList.remove('visible');
+}
+
+function hideLoader() {
+  document.getElementById('loader').style.display = 'none';
+  document.getElementById('content').classList.add('visible');
+}
+
+async function fetchConfig() {
+  try {
+    showLoader();
+    const response = await fetch('/config');
+    config = await response.json();
+    updateUIWithConfig();
+    await fetchAPIList();
+  } catch (error) {
+    console.error('Error fetching config:', error);
+  } finally {
+    hideLoader();
+}
+}
+
+function updateUIWithConfig() {
+  document.getElementById('page-title').textContent = config.name;
+  document.getElementById('api-name').textContent = config.name;
+  document.getElementById('api-description').textContent = config.description;
+  document.getElementById('email-link').textContent = config.email;
+  document.getElementById('email-link').href = `mailto:${config.email}`;
+  document.getElementById('phone-link').textContent = config.number;
+  document.getElementById('phone-link').href = `tel:${config.number}`;
+  document.getElementById('birthday').textContent = config.birthday2;
+  document.getElementById('birthday').setAttribute('datetime', config.birthday);
+  document.getElementById('location').textContent = config.location;
+  document.getElementById('facebook-link').href = config.facebook;
+  document.getElementById('github-link').href = config.github;
+  document.getElementById('twitter-link').href = config.twitter;
+  document.getElementById('linkedin-link').href = config.linkedin;
+  document.getElementById('about-title').textContent = `About ${config.name2}`;
+  document.getElementById('about-text-1').textContent = `Welcome to ${config.name2}, a powerful and flexible REST API service designed to meet your data needs. Our API provides easy access to a wide range of endpoints, allowing you to integrate diverse functionalities into your applications seamlessly.`;
+  document.getElementById('about-text-2').textContent = `Whether you're building web applications, mobile apps, or data-driven services, ${config.name2} offers robust solutions to enhance your development process. Explore our endpoints to discover how we can help you create more efficient and feature-rich applications.`;
+}
+
+async function fetchAPIList() {
+  try {
+    const response = await fetch('/api-list');
+    apis = await response.json();
+    displayAPIs(apis);
+    setupCategoryFilter(apis);
+  } catch (error) {
+    console.error('Error fetching API list:', error);
+  }
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+  fetchConfig();
+
+  // Check if this is the main page
+  if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    // Show loader on initial page load
+    showLoader();
+  } else {
+    // Hide loader and show content immediately on other pages
+    hideLoader();
+  }
 });

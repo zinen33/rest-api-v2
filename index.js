@@ -15,6 +15,11 @@ app.use(express.static(path.join(__dirname, 'web', 'public')));
 
 app.use(router);
 
+// Add this route to your Express server (e.g., in index.js)
+app.get("/config", (req, res) => {
+  res.json(global.config);
+});
+
 // Endpoint to serve the API list
 app.get("/api-list", (req, res) => {
   const apiList = Array.from(global.api.values()).map(api => api.config);
