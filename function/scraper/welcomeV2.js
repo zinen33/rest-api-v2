@@ -5,6 +5,7 @@ const fs = require('fs');
 exports.config = {
     name: 'welcomeV2',
     author: 'Lance Cochangco',
+    description: 'Generate a welcome card with custom text',
     category: 'canvas',
     link: ['/welcomeV2?nickname=lanceajiro&secondText=Have a nice day&avatar=https://imgur.com/xwCoQ5H.jpg']
 };

@@ -5,6 +5,7 @@ const path = require('path');
 exports.config = {
     name: 'welcome',
     author: 'Lance Cochangco',
+    description: 'Generate a welcome canvas image',
     category: 'canvas',
     link: ['/welcome?username=Lance&avatarUrl=https://i.imgur.com/xwCoQ5H.jpeg&groupname=Ajironian&bg=https://i.ibb.co/4YBNyvP/images-76.jpg&memberCount=25'],
 };

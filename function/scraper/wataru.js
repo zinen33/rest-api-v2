@@ -4,6 +4,7 @@ const g4f = new G4F();
 exports.config = {
     name: 'wataru',
     author: 'Lance Cochangco',
+    description: 'Chat with Wataru the friendly AI',
     category: 'ai',
     link: ['/wataru?question=hi']
 };

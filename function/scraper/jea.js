@@ -4,6 +4,7 @@ const g4f = new G4F();
 exports.config = {
     name: 'jea',
     author: 'Lance Cochangco',
+    description: 'Chat with Jea a personal AI girlfriend',
     category: 'ai',
     link: ['/jea?question=hi']
 };

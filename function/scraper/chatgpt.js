@@ -4,6 +4,7 @@ const g4f = new G4F();
 exports.config = {
     name: 'chatgpt',
     author: 'Lance Cochangco',
+    description: 'Chat with chatGPT',
     category: 'ai',
     link: ['/chatgpt?question=hi']
 };

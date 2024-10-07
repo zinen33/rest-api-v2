@@ -3,6 +3,7 @@ const axios = require("axios");
 exports.config = {
     name: 'tiktok',
     author: 'Lance Cochangco',
+    description: 'Download Tiktok Video',
     category: 'tools',
     link: ['/tiktok?query=aicakes'] // Update this link as needed
 };

@@ -3,6 +3,7 @@ const axios = require('axios');
 exports.config = {
     name: 'cosplay',
     author: 'Lance Cochangco',
+    description: 'Get random cosplay video',
     category: 'anime',
     link: ['/cosplay']
 };

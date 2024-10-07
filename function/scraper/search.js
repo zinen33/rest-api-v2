@@ -3,6 +3,7 @@ const DDG = require('duck-duck-scrape');
 exports.config = {
     name: 'search',
     author: 'Lance Cochangco',
+    description: 'Search for a topic on DuckDuckGo',
     category: 'tools',
     link: ['/search?query=who is Jose Rizal?']
 };

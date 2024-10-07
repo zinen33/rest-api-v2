@@ -3,6 +3,7 @@ const { capcut } = require('betabotz-tools');
 exports.config = {
     name: 'capcut',
     author: 'Lance Cochangco',
+    description: 'Download video from capcut',
     category: 'tools',
     link: ['/capcut?url=']
 };
