@@ -289,19 +289,9 @@
     }
 
     function tryAPI(apiLink) {
-      showLoader();
-      // Save the current state before navigating to the API
-      history.pushState(null, '', window.location.href);
-
-      // Navigate to the API
+      // Navigate to the API without showing the loader
       window.location.href = `/api${apiLink}`;
     }
-
-    // Listen for popstate event (when user navigates back)
-    window.addEventListener('popstate', function(event) {
-      // Return to the previous page
-      window.location.href = document.referrer;
-    });
 
     function showLoader() {
       document.getElementById('loader').style.display = 'flex';
@@ -311,6 +301,15 @@
     function hideLoader() {
       document.getElementById('loader').style.display = 'none';
       document.getElementById('content').classList.add('visible');
+    }
+
+    // Check if this is the main page
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+      // Show loader on initial page load
+      showLoader();
+    } else {
+      // Hide loader and show content immediately on other pages
+      hideLoader();
     }
   </script>
 </body>
