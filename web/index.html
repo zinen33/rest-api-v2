@@ -52,154 +52,197 @@
     .try-button:hover {
       background: #FFC800;
     }
+    /* Loading Animation Styles */
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #222222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #FFD700;
+      border-top: 5px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .content {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .content.visible {
+      opacity: 1;
+    }
   </style>
 </head>
 
 <body>
-  <main>
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="images/my-avatar.png" alt="Ajiro API" width="80">
-        </figure>
+  <div class="loader-container" id="loader">
+    <div class="loader"></div>
+  </div>
 
-        <div class="info-content">
-          <h1 class="name" title="Ajiro API">Ajiro API</h1>
-          <p class="title">Rest API by Lance Ajiro</p>
-        </div>
+  <div class="content" id="content">
+    <main>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="images/my-avatar.png" alt="Ajiro API" width="80">
+          </figure>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
-
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-              <a href="tel:+12345678900" class="contact-link">+1 (234) 567-8900</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Sacramento, California, USA</address>
-            </div>
-          </li>
-        </ul>
-        <div class="separator"></div>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <div class="main-content">
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Endpoints</button>
-          </li>
-        </ul>
-      </nav>
-
-      <article class="about active" data-page="about">
-        <header>
-          <h2 class="h2 article-title">About Ajiro Rest API</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Welcome to Ajiro Rest API, a powerful and flexible REST API service designed to meet your data needs. 
-            Our API provides easy access to a wide range of endpoints, allowing you to integrate diverse functionalities 
-            into your applications seamlessly.
-          </p>
-          <p>
-            Whether you're building web applications, mobile apps, or data-driven services, Ajiro Rest API offers 
-            robust solutions to enhance your development process. Explore our endpoints to discover how we can 
-            help you create more efficient and feature-rich applications.
-          </p>
-        </section>
-      </article>
-
-      <article class="portfolio" data-page="endpoints">
-        <header>
-          <h2 class="h2 article-title">Endpoints</h2>
-        </header>
-
-        <section class="projects">
-          <ul class="filter-list" id="category-filter">
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-          </ul>
-
-          <div class="filter-select-box">
-            <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-            </button>
-
-            <ul class="select-list" id="category-select">
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-            </ul>
+          <div class="info-content">
+            <h1 class="name" title="Ajiro API">Ajiro API</h1>
+            <p class="title">Rest API by Lance Ajiro</p>
           </div>
 
-          <ul class="project-list" id="api-list">
-            <!-- API items will be dynamically added here -->
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto: lanceaaronwazzup@gmail.com" class="contact-link">lanceaaronwazzup@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+                <a href="tel:N/A" class="contact-link">N/A</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+                <time datetime="2005-05-17">May 17, 2005</time>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Calauag, Quezon, Philippines</address>
+              </div>
+            </li>
           </ul>
-        </section>
-      </article>
-    </div>
-  </main>
+          <div class="separator"></div>
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://www.facebook.com/lance.cochangco" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://github.com/lancecochangco" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://x.com/lanceajiro" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="main-content">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Endpoints</button>
+            </li>
+          </ul>
+        </nav>
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About Ajiro Rest API</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              Welcome to Ajiro Rest API, a powerful and flexible REST API service designed to meet your data needs. 
+              Our API provides easy access to a wide range of endpoints, allowing you to integrate diverse functionalities 
+              into your applications seamlessly.
+            </p>
+            <p>
+              Whether you're building web applications, mobile apps, or data-driven services, Ajiro Rest API offers 
+              robust solutions to enhance your development process. Explore our endpoints to discover how we can 
+              help you create more efficient and feature-rich applications.
+            </p>
+          </section>
+        </article>
+
+        <article class="portfolio" data-page="endpoints">
+          <header>
+            <h2 class="h2 article-title">Endpoints</h2>
+          </header>
+
+          <section class="projects">
+            <ul class="filter-list" id="category-filter">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>Select category</div>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list" id="category-select">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list" id="api-list">
+              <!-- API items will be dynamically added here -->
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
 
   <script src="js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -212,12 +255,15 @@
 
     async function fetchAPIList() {
       try {
+        showLoader();
         const response = await fetch('/api-list');
         const apis = await response.json();
         displayAPIs(apis);
         setupCategoryFilter(apis);
       } catch (error) {
         console.error('Error fetching API list:', error);
+      } finally {
+        hideLoader();
       }
     }
 
@@ -235,11 +281,36 @@
           <h3 class="project-title">${api.name}</h3>
           <p class="project-category">${api.description}</p>
           <p class="project-method">${'GET'}</p>
-          <button class="try-button" onclick="window.location.href='/api${api.link[0]}'">Try it out</button>
+          <button class="try-button" onclick="tryAPI('${api.link[0]}')">Try it out</button>
         `;
 
         apiList.appendChild(listItem);
       });
+    }
+
+    function tryAPI(apiLink) {
+      showLoader();
+      // Save the current state before navigating to the API
+      history.pushState(null, '', window.location.href);
+
+      // Navigate to the API
+      window.location.href = `/api${apiLink}`;
+    }
+
+    // Listen for popstate event (when user navigates back)
+    window.addEventListener('popstate', function(event) {
+      // Return to the previous page
+      window.location.href = document.referrer;
+    });
+
+    function showLoader() {
+      document.getElementById('loader').style.display = 'flex';
+      document.getElementById('content').classList.remove('visible');
+    }
+
+    function hideLoader() {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('content').classList.add('visible');
     }
   </script>
 </body>
