@@ -1180,52 +1180,75 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+
 /* API Style */
 
 .project-item {
-  background: #222222;
-  border-radius: 12px;
+  background: var(--eerie-black-2);
+  border-radius: 14px;
   padding: 20px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-1);
   margin-bottom: 20px;
+  transition: var(--transition-1);
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-2);
 }
 
 .project-title {
-  color: white;
-  font-size: 24px;
-  font-weight: 600;
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
   margin: 0 0 8px 0;
 }
 
 .project-category {
-  color: #808080;
-  font-size: 16px;
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
   margin: 0 0 16px 0;
 }
 
 .project-method {
-  color: #FFD700;
-  font-size: 14px;
-  font-weight: 500;
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
   margin: 0 0 16px 0;
 }
 
 .try-button {
-  background: #FFD700;
-  color: black;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
   border: none;
-  border-radius: 6px;
+  border-radius: 14px;
   padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: var(--transition-1);
+  position: relative;
+  z-index: 1;
+}
+
+.try-button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
 }
 
 .try-button:hover {
-  background: #FFC800;
+  background: var(--bg-gradient-yellow-1);
+}
+
+.try-button:hover::before {
+  background: var(--bg-gradient-yellow-2);
 }
 
 /* Loading Animation Styles */
@@ -1235,7 +1258,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #222222;
+  background-color: var(--eerie-black-1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1245,7 +1268,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .loader {
   width: 50px;
   height: 50px;
-  border: 5px solid #FFD700;
+  border: 5px solid var(--orange-yellow-crayola);
   border-top: 5px solid transparent;
   border-radius: 50%;
   animation: spin 1s linear infinite;
