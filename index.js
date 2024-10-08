@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const log = require("./function/log")
+const cors = require("cors");
 const config = require("./config.json");
 
 global.config = config;
@@ -14,6 +15,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'web', 'public')));
 
 app.use(router);
+
+app.use(cors());
 
 // Add this route to your Express server (e.g., in index.js)
 app.get("/config", (req, res) => {
