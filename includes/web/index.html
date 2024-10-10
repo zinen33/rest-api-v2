@@ -10,23 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    .service-icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .service-svg {
-      max-width: 60px;
-      height: auto;
-    }
-
-    .service-content-box {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <div class="loader-container" id="loader">
@@ -157,8 +140,10 @@
                   <div class="service-icon">
                     <img src="images/rest-api.svg" alt="REST API Icon" class="service-svg">
                   </div>
-                  <h4 class="h4 service-item-title">Total Endpoints</h4>
-                  <p class="service-item-text" id="total-endpoints">Loading...</p>
+                  <div class="service-text-wrapper">
+                    <h4 class="h4 service-item-title">Total Endpoints</h4>
+                    <p class="service-item-text" id="total-endpoints">Loading...</p>
+                  </div>
                 </div>
               </div>
 
@@ -167,8 +152,10 @@
                   <div class="service-icon">
                     <img src="images/category.svg" alt="Category Icon" class="service-svg">
                   </div>
-                  <h4 class="h4 service-item-title">Available Categories</h4>
-                  <p class="service-item-text" id="total-categories">Loading...</p>
+                  <div class="service-text-wrapper">
+                    <h4 class="h4 service-item-title">Available Categories</h4>
+                    <p class="service-item-text" id="total-categories">Loading...</p>
+                  </div>
                 </div>
               </div>
             </div>
