@@ -180,7 +180,7 @@ async function fetchConfig() {
     console.error('Error fetching config:', error);
   } finally {
     hideLoader();
-}
+  }
 }
 
 function updateUIWithConfig() {
@@ -203,12 +203,32 @@ function updateUIWithConfig() {
   document.getElementById('about-text-2').textContent = `Whether you're building web applications, mobile apps, or data-driven services, ${config.name2} offers robust solutions to enhance your development process. Explore our endpoints to discover how we can help you create more efficient and feature-rich applications.`;
 }
 
+async function updateAPIStatistics() {
+  try {
+    // Get total number of endpoints
+    const totalEndpoints = apis.length;
+    
+    // Get unique categories
+    const uniqueCategories = [...new Set(apis.map(api => api.category))];
+    const totalCategories = uniqueCategories.length;
+    
+    // Update the statistics in the UI
+    document.getElementById('total-endpoints').textContent = `${totalEndpoints} Available Endpoints`;
+    document.getElementById('total-categories').textContent = `${totalCategories} Different Categories`;
+  } catch (error) {
+    console.error('Error updating API statistics:', error);
+    document.getElementById('total-endpoints').textContent = 'Error loading data';
+    document.getElementById('total-categories').textContent = 'Error loading data';
+  }
+}
+
 async function fetchAPIList() {
   try {
     const response = await fetch('/api-list');
     apis = await response.json();
     displayAPIs(apis);
     setupCategoryFilter(apis);
+    updateAPIStatistics(); // Add this line to update the statistics
   } catch (error) {
     console.error('Error fetching API list:', error);
   }
@@ -217,7 +237,6 @@ async function fetchAPIList() {
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
   fetchConfig();
-
   // Check if this is the main page
   if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
     // Show loader on initial page load
