@@ -3,7 +3,7 @@ const { readdirSync } = require('fs-extra');
 const path = require('path');
 const log = require('./log');
 const compression = require('compression');
-const srcPath = path.join(__dirname, "/scraper/");
+const srcPath = path.join(__dirname, "../scraper/");
 
 // Use compression middleware
 router.use(compression());
