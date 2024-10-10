@@ -1348,8 +1348,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
-  height: 5px;
+  width: 30px;
+  height: 3px;
   background: var(--text-gradient-yellow);
   border-radius: 3px;
 }
@@ -1367,7 +1367,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
-  transition: var(--transition-1);
+  transition: box-shadow var(--transition-1);
 }
 
 .service-item::before {
@@ -1384,14 +1384,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .service-content-box {
-  text-align: left;
+  text-align: center;
 }
 
 .service-item-title {
+  margin-block-end: 7px;
   color: var(--white-2);
   font-size: var(--fs-4);
   font-weight: var(--fw-500);
-  margin-bottom: 7px;
 }
 
 .service-item-text {
@@ -1421,13 +1421,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .service-item-title {
-    margin-bottom: 10px;
+    margin-block-end: 10px;
   }
 }
 
 @media (min-width: 1024px) {
   .service-list {
-    grid-template-columns: 1fr;
     gap: 30px;
     max-width: 700px;
     margin-inline: auto;
@@ -1439,10 +1438,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .service-item-title {
     font-size: var(--fs-2);
-    margin-bottom: 15px;
+    margin-block-end: 15px;
   }
 
   .service-item-text {
     font-size: var(--fs-4);
   }
 }
+
