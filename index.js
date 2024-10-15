@@ -1,7 +1,9 @@
 const express = require("express");
+      secure = require('ssl-express-www');
+      cors = require("cors");
+const bodyParser = require("body-parser");
 const path = require("path");
 const log = require("./includes/log")
-const cors = require("cors");
 const config = require("./config.json");
 
 global.config = config;
@@ -11,12 +13,14 @@ const app = express();
 
 app.use(express.json());
 
-// Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'includes', 'web', 'public')));
 
 app.use(router);
 
 app.use(cors());
+app.use(secure);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Add this route to your Express server (e.g., in index.js)
 app.get("/config", (req, res) => {
