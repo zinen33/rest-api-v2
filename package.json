@@ -1,5 +1,5 @@
 {
-  "name": "AjiroRestApi",
+  "name": "ajiro-rest-api",
   "version": "1.0.0",
   "description": "A simple rest api by AjiroDesu",
   "main": "index.js",

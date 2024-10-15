@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'includes', 'web', 'public')));
 
 app.use(router);
-
+app.enable('trust proxy');
+app.set("json spaces", 2);
 app.use(cors());
 app.use(secure);
 app.use(bodyParser.json());
