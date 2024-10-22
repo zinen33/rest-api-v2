@@ -5,6 +5,7 @@ exports.config = {
     name: 'facebook',
     author: 'Lance Cochangco',
     description: 'Download Facebook videos',
+    method: 'GET',
     category: 'downloader',
     link: ['/facebook?url=https://www.facebook.com/itsmusicmood/videos/1234801394606164/?app=fbl']
 };

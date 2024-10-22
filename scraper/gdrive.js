@@ -20,6 +20,7 @@ exports.config = {
     name: 'gdrive',
     author: 'Lance Cochangco', // The creator's name here
     description: 'Download files from Google Drive using a URL',
+    method: 'GET',
     category: 'downloader',
     link: ['/gdrive?url=']
 };

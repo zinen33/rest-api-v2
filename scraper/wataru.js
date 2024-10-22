@@ -5,6 +5,7 @@ exports.config = {
     name: 'wataru',
     author: 'Lance Cochangco',
     description: 'Chat with Wataru the friendly AI',
+    method: 'GET',
     category: 'ai',
     link: ['/wataru?question=hi']
 };

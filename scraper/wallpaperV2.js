@@ -5,6 +5,7 @@ exports.config = {
     name: 'wallpaperV2',
     author: 'Lance Cochangco',
     description: 'Search for wallpapers on Best HD Wallpaper',
+    method: 'GET',
     category: 'search',
     link: ['/wallpaperV2?text=landscape']
 };

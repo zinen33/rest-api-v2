@@ -4,6 +4,7 @@ exports.config = {
     name: 'search',
     author: 'Lance Cochangco',
     description: 'Search for a topic on DuckDuckGo',
+    method: 'GET',
     category: 'tools',
     link: ['/search?query=who is Jose Rizal?']
 };

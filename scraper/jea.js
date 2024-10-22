@@ -5,6 +5,7 @@ exports.config = {
     name: 'jea',
     author: 'Lance Cochangco',
     description: 'Chat with Jea a personal AI girlfriend',
+    method: 'GET',
     category: 'ai',
     link: ['/jea?question=hi']
 };

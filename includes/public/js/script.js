@@ -125,7 +125,7 @@ function displayAPIs(apis) {
     listItem.innerHTML = `
       <h3 class="project-title">${api.name}</h3>
       <p class="project-category">${api.description}</p>
-      <p class="project-method">${'GET'}</p>
+      <p class="project-method">${api.method}</p>
       <button class="try-button" onclick="tryAPI('${api.link[0]}')">Try it out</button>
     `;
 

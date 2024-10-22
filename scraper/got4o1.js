@@ -4,7 +4,8 @@ exports.config = {
     name: "gpt4o1",
     version: "1.0.0",
     author: "Kenneth Panio",
-    info: "Interact with GPT-4 o1 preview AI with websearch, file generation, and image recognition based on image URL in query.",
+    description: "Interact with GPT-4 o1 preview AI with websearch, file generation, and image recognition based on image URL in query.",
+    method: 'GET',
     link: [`/gpt4o1?prompt=generate_a_cat_image&uid=${Date.now()}`],
     guide: "ai How does quantum computing work?",
     category: "ai"

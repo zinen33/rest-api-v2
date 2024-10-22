@@ -4,6 +4,7 @@ exports.config = {
     name: 'mal',
     author: 'Lance Cochangco',
     description: 'Search for anime on MyAnimeList',
+    method: 'GET',
     category: 'anime',
     link: ['/mal?title=summertime render']
 };

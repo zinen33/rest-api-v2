@@ -7,6 +7,7 @@ exports.config = {
     name: 'uptime',
     author: 'Lance Cochangco',
     description: 'Get uptime canvas',
+    method: 'GET',
     category: 'canvas',
     link: ['/uptime?instag=lance.cochangco&ghub=ajirodesu&fb=Lance%20Cochangco&hours=1&minutes=23&seconds=45&botname=Wataru']
 };

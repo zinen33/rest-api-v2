@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, 'includes', 'web', 'public')));
+app.use(express.static(path.join(__dirname, 'includes', 'public')));
 
 app.use(router);
 app.enable('trust proxy');
