@@ -4,7 +4,7 @@ exports.config = {
     name: 'downloaderV2',
     author: 'Lance Cochangco',
     description: 'Downloads media from YouTube using CobaltAPI.',
-    method: 'GET',
+    method: 'get',
     category: 'tools',
     link: ['/downloaderV2']
 };

@@ -5,7 +5,7 @@ exports.config = {
     name: 'animesticker',
     author: 'Lance Cochangco', 
     description: 'Fetch a random anime sticker',
-    method: 'GET',
+    method: 'get',
     category: 'anime',
     link: ['/animesticker']
 };

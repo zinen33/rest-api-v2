@@ -6,7 +6,7 @@ exports.config = {
     name: 'rank',
     author: 'Lance Cochangco',
     description: 'Generate a rank card',
-    method: 'GET',
+    method: 'get',
     category: 'canvas',
     link: ['/rank?level=102&rank=563&xp=71032&requiredXP=95195&nickname=xLance Ajiro&status=online&avatar=https://imgur.com/xwCoQ5H.jpg']
 };

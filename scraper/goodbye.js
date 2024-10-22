@@ -7,7 +7,7 @@ exports.config = {
     author: 'Lance Cochangco',
     description: 'Generate a goodbye image',
     category: 'canvas',
-    method: 'GET',
+    method: 'get',
     link: ['/goodbye?pp=https://i.imgur.com/xwCoQ5H.jpeg&nama=Lance&bg=https://i.ibb.co/4YBNyvP/images-76.jpg&member=25']
 };
 

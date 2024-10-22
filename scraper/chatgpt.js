@@ -5,7 +5,7 @@ exports.config = {
     name: 'chatgpt',
     author: 'Lance Cochangco',
     description: 'Chat with chatGPT',
-    method: 'GET',
+    method: 'get',
     category: 'ai',
     link: ['/chatgpt?question=hi']
 };

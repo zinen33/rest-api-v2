@@ -6,7 +6,7 @@ exports.config = {
     name: 'twitter',
     author: 'Lance Cochangco',
     description: 'Download videos from Twitter using a URL',
-    method: 'GET',
+    method: 'get',
     category: 'downloader',
     link: ['/twitter?url=']
 };

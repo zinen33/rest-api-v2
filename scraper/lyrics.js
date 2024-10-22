@@ -4,7 +4,7 @@ exports.config = {
     name: 'lyrics',
     author: 'Lance Cochangco',
     description: 'Fetch song lyrics',
-    method: 'GET',
+    method: 'get',
     category: 'search',
     link: ['/lyrics?query=until i found you']
 };

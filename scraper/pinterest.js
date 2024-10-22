@@ -5,7 +5,7 @@ exports.config = {
     name: 'pinterest',
     author: 'Lance Cochangco',
     description: 'Search for Pinterest images',
-    method: 'GET',
+    method: 'get',
     category: 'search',
     link: ['/pinterest?text=night place']
 };

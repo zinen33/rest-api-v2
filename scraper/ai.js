@@ -12,7 +12,7 @@ exports.config = {
   name: 'ai',
   author: 'Lance Cochangco',
   description: 'Advanced API for dynamic text generation using various AI models',
-  method: 'GET',
+  method: 'get',
   category: 'ai',
   link: ['/ai']
 };

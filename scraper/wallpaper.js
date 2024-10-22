@@ -4,7 +4,7 @@ exports.config = {
     name: 'wallpaper',
     author: 'Lance Cochangco', // The creator's name here
     description: 'Search for wallpapers',
-    method: 'GET',
+    method: 'get',
     category: 'search',
     link: ['/wallpaper?query=landscape']
 };

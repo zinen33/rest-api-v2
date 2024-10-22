@@ -7,7 +7,7 @@ exports.config = {
     author: 'Lance Cochangco',
     description: 'Generate a welcome card with custom text',
     category: 'canvas',
-    method: 'GET',
+    method: 'get',
     link: ['/welcomeV2?nickname=lanceajiro&secondText=Have a nice day&avatar=https://imgur.com/xwCoQ5H.jpg']
 };
 

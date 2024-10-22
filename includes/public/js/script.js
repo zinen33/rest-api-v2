@@ -123,12 +123,11 @@ function displayAPIs(apis) {
     listItem.setAttribute('data-category', api.category.toLowerCase());
 
     listItem.innerHTML = `
-      <h3 class="project-title">${api.name}</h3>
-      <p class="project-category">${api.description}</p>
-      <p class="project-method">${api.method}</p>
-      <button class="try-button" onclick="tryAPI('${api.link[0]}')">Try it out</button>
-    `;
-
+  <h3 class="project-title">${api.name}</h3>
+  <p class="project-category">${api.description}</p>
+  <p class="project-method">${api.method.toUpperCase()}</p>
+  <button class="try-button" onclick="tryAPI('${api.link[0]}')">Try it out</button>
+`;
     apiList.appendChild(listItem);
   });
 }
