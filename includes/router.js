@@ -4,8 +4,7 @@ const path = require('path');
 const log = require('./log');
 const { performance } = require('perf_hooks');
 const compression = require('compression');
-
-const srcPath = path.join(__dirname, "../scraper/");
+const srcPath = path.join(__dirname, "../api/");
 
 // Use compression middleware
 router.use(compression());
@@ -29,28 +28,12 @@ apiCache.forEach((api, name) => {
   const routePath = `/api/${name}`;
   router.get(routePath, async (req, res) => {
     try {
-      // Capture the original res.json method
-      const originalJson = res.json;
-      
-      // Override res.json to pretty-print the response
-      res.json = function(obj) {
-        // Restore the original json method
-        res.json = originalJson;
-        
-        // Set the Content-Type header
-        res.setHeader('Content-Type', 'application/json');
-        
-        // Send the pretty-printed JSON
-        return res.send(JSON.stringify(obj, null, 2));
-      };
-      
       await api.initialize({ req, res, log });
     } catch (error) {
       console.error(`Error in ${name} API:`, error);
-      res.status(500).json({ error: "An error occurred" });
+      res.status(500).send("An error occurred");
     }
   });
-  
   if (global.api && global.api instanceof Map) {
     global.api.set(name, api);
   } else {
@@ -60,6 +43,6 @@ apiCache.forEach((api, name) => {
   log.main(`Successfully loaded ${name}`);
 });
 
-log.main(`Successfully loaded ${n} API${n !== 1 ? 's' : ''}`);
+  log.main(`Successfully loaded ${n} API${n !== 1 ? 's' : ''}`);
 
 module.exports = router;
