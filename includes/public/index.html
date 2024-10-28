@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajiro API - Free REST API Service</title>
+    <meta name="description" content="Ajiro API is a free REST API service providing various endpoints for AI, news, and search functionalities.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+        .accordion-content.open {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white p-4 md:p-8">
+    <div id="particles-js"></div>
+    <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2">Ajiro API</h1>
+        <p class="text-gray-400">Welcome to Ajiro API, a free REST API service</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto space-y-12">
+        <section class="bg-gray-800 bg-opacity-75 rounded-lg p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-semibold">Time</h3>
+                    <p id="current-time" aria-live="polite"></p>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Date</h3>
+                    <p id="current-date" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-4">API Endpoints</h2>
+            <div class="space-y-2" id="endpoints-container"></div>
+        </section>
+
+        <section class="bg-gray-800 bg-opacity-75 rounded-lg p-6 shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Additional Information</h2>
+            <p class="text-gray-400">
+                This REST API website is still in the development stage (BETA). We appreciate your understanding regarding any shortcomings. Thank you!
+            </p>
+        </section>
+    </main>
+
+    <footer class="text-center mt-12 text-sm text-gray-500">
+        <p>Copyright © <span id="current-year"></span>AjiroDesu</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        async function fetchApiList() {
+            try {
+                const response = await fetch('/api-list');
+                const apiList = await response.json();
+                return apiList;
+            } catch (error) {
+                console.error('Error fetching API list:', error);
+                return [];
+            }
+        }
+
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleTimeString();
+            document.getElementById('current-date').textContent = now.toLocaleDateString();
+            document.getElementById('current-year').textContent = now.getFullYear();
+        }
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function createAccordion(category, items) {
+            const accordion = document.createElement('div');
+            accordion.className = 'accordion mb-2';
+            accordion.innerHTML = `
+                <div class="bg-gray-800 bg-opacity-75 p-3 rounded-md cursor-pointer flex justify-between items-center" aria-expanded="false">
+                    <span>${capitalizeFirstLetter(category)}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="accordion-content" aria-hidden="true">
+                    <div class="space-y-2 mt-2">
+                        ${items.map(item => `
+                            <div class="flex items-center justify-between bg-gray-700 bg-opacity-75 p-3 rounded-md">
+                                <div>
+                                    <div class="font-medium">${capitalizeFirstLetter(item.name)}</div>
+                                    <div class="text-sm text-gray-400">${item.description}</div>
+                                </div>
+                                <button class="bg-blue-500 text-white px-2 py-1 rounded text-sm ml-2 hover:bg-blue-600 transition-colors" aria-label="Use ${capitalizeFirstLetter(item.name)}" onclick="useApi('${item.endpoint}')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            return accordion;
+        }
+
+        async function initAccordions() {
+            const container = document.getElementById('endpoints-container');
+            const apiList = await fetchApiList();
+
+            const categories = {};
+
+            apiList.forEach(api => {
+                if (!categories[api.category]) {
+                    categories[api.category] = [];
+                }
+                categories[api.category].push(api);
+            });
+
+            Object.entries(categories).forEach(([category, items]) => {
+                if (items.length > 0) {
+                    container.appendChild(createAccordion(category, items));
+                }
+            });
+
+            document.querySelectorAll('.accordion').forEach(accordion => {
+                const header = accordion.querySelector('div');
+                const content = accordion.querySelector('.accordion-content');
+                const arrow = header.querySelector('svg');
+
+                header.addEventListener('click', () => {
+                    const isExpanded = header.getAttribute('aria-expanded') === 'true';
+                    header.setAttribute('aria-expanded', !isExpanded);
+                    content.setAttribute('aria-hidden', isExpanded);
+                    content.classList.toggle('open');
+                    arrow.classList.toggle('rotate-180');
+                });
+            });
+        }
+
+        function useApi(endpoint) {
+            window.open(endpoint, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+            initAccordions();
+
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#ffffff" },
+                    shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+                    opacity: { value: 0.5, random: false, anim: { enable: false } },
+                    size: { value: 3, random: true, anim: { enable: false } },
+                    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                    modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+</body>
+</html>

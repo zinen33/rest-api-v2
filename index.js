@@ -1,19 +1,19 @@
 const express = require("express");
-      secure = require('ssl-express-www');
-      cors = require("cors");
+const secure = require('ssl-express-www');
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const path = require("path");
-const log = require("./includes/log")
+const log = require("./includes/log");
 const config = require("./config.json");
 
 global.config = config;
-global.api = new Map(); // Ensure global.api is initialized here
+global.api = new Map();
 const router = require("./includes/router");
 const app = express();
 
 app.use(express.json());
-
 app.use(express.static(path.join(__dirname, 'includes', 'public')));
+app.use(express.static(path.join(__dirname, 'includes', 'web')));
 
 app.use(router);
 app.enable('trust proxy');
@@ -23,25 +23,25 @@ app.use(secure);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Add this route to your Express server (e.g., in index.js)
-app.get("/config", (req, res) => {
-  res.json(global.config);
-});
-
 // Endpoint to serve the API list
 app.get("/api-list", (req, res) => {
-  const apiList = Array.from(global.api.values()).map(api => api.config);
+  const apiList = Array.from(global.api.values()).map(api => ({
+    name: api.config.name,
+    description: api.config.description,
+    endpoint: `api/${api.config.link}`,
+    category: api.config.category
+  }));
   res.json(apiList);
 });
 
 // Serve the documentation page
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "includes", "web", "index.html"));
+  res.sendFile(path.join(__dirname, "includes", "public", "index.html"));
 });
 
 // Serve the 404 page for unknown routes
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "includes", "web", "404.html"));
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "includes", "public", "404.html"));
 });
 
 const PORT = process.env.PORT || global.config.port || 3000;
