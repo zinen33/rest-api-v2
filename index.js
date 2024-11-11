@@ -28,7 +28,7 @@ app.get("/api-list", (req, res) => {
   const apiList = Array.from(global.api.values()).map(api => ({
     name: api.config.name,
     description: api.config.description,
-    endpoint: `api/${api.config.link}`,
+    endpoint: `api${api.config.link}`,
     category: api.config.category
   }));
   res.json(apiList);
