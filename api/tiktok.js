@@ -5,7 +5,7 @@ exports.config = {
     author: 'Lance Cochangco',
     description: 'Download Tiktok Video',
     method: 'get',
-    category: 'tools',
+    category: 'search',
     link: ['/tiktok?query=aicakes'] // Update this link as needed
 };
 

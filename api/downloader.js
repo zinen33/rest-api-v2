@@ -5,7 +5,7 @@ exports.config = {
     author: 'Lance Cochangco',
     description: 'Downloads media from various platforms like Twitter, Instagram, Facebook, etc.',
     method: 'get',
-    category: 'tools',
+    category: 'downloader',
     link: ['/downloader']
 };
 

@@ -5,7 +5,7 @@ exports.config = {
     author: 'Lance Cochangco',
     description: 'Download video from capcut',
     method: 'get',
-    category: 'tools',
+    category: 'downloader',
     link: ['/capcut?url=']
 };
 
