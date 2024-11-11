@@ -9,14 +9,14 @@ exports.config = {
     link: ['/downloader']
 };
 
-// Supported platforms and their variations
+// Supported platforms with regex patterns for flexibility
 const supportedPlatforms = {
-    twitter: ["twitter.com", "x.com", "www.twitter.com", "www.x.com"],
-    instagram: ["instagram.com", "www.instagram.com"],
-    facebook: ["facebook.com", "www.facebook.com", "facebook.com/share/v/", "www.facebook.com/share/v/"],
-    tiktok: ["tiktok.com", "vt.tiktok.com", "www.tiktok.com", "www.vt.tiktok.com"],
-    "google-drive": ["drive.google.com", "www.drive.google.com"],
-    sfile: ["sfile.mobi", "www.sfile.mobi"]
+    twitter: /https?:\/\/(www\.)?(twitter\.com|x\.com)\/.*/,
+    instagram: /https?:\/\/(www\.)?instagram\.com\/.*/,
+    facebook: /https?:\/\/(www\.)?facebook\.com(\/share\/v\/)?.*/,
+    tiktok: /https?:\/\/(www\.)?(tiktok\.com|vt\.tiktok\.com)\/.*/,
+    "google-drive": /https?:\/\/(www\.)?drive\.google\.com\/.*/,
+    sfile: /https?:\/\/(www\.)?sfile\.mobi\/.*/
 };
 
 exports.initialize = async function ({ req, res }) {
@@ -32,12 +32,9 @@ exports.initialize = async function ({ req, res }) {
             url = "https://" + url;
         }
 
-        // Remove 'www.' from the URL for consistent pattern matching
-        const normalizedUrl = url.replace(/^https?:\/\/(www\.)?/, 'https://');
-
-        // Detect platform by checking if the normalized URL matches any of the supported platform patterns
+        // Detect platform by checking if the URL matches any supported platform regex pattern
         let platform = Object.keys(supportedPlatforms).find(key => 
-            supportedPlatforms[key].some(pattern => normalizedUrl.includes(pattern.replace("www.", "")))
+            supportedPlatforms[key].test(url)
         );
 
         if (!platform) {
@@ -53,12 +50,7 @@ exports.initialize = async function ({ req, res }) {
                 result = await nexo.instagram(url);
                 break;
             case 'facebook':
-                if (url.includes('/share/v/')) {
-                    // Handle shared post URLs specifically
-                    result = await nexo.facebook(url); // Assuming `nexo.facebook` supports shared videos
-                } else {
-                    result = await nexo.facebook(url);
-                }
+                result = await nexo.facebook(url);
                 break;
             case 'tiktok':
                 result = await nexo.tiktok(url);
