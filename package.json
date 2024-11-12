@@ -1,5 +1,5 @@
 {
-  "name": "ajiro-rest-api",
+  "name": "ajiroapi",
   "version": "1.0.0",
   "description": "A simple rest api by AjiroDesu",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lanceajiro/Ajiro-Api.git"
+    "url": "https://github.com/ajirodesu/ajiroapi.git"
   },
   "keywords": [],
   "author": "AjiroDesu",
