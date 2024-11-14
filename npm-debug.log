@@ -419,62 +419,62 @@
 398 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/ytdl-core/package.json
 399 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/zod/package.json
 400 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@babel/runtime/package.json
-401 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@distube/ytdl-core/package.json
-402 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper/package.json
-403 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-bmkg/package.json
-404 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-downloader/package.json
-405 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-games/package.json
-406 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-images/package.json
-407 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-news/package.json
-408 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-others/package.json
-409 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-primbon/package.json
-410 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-religions/package.json
-411 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-sosmed/package.json
-412 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-texts/package.json
-413 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linux-x64/package.json
-414 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linuxmusl-x64/package.json
-415 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-linux-x64/package.json
-416 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-linuxmusl-x64/package.json
-417 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@mapbox/node-pre-gyp/package.json
-418 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/bmp/package.json
-419 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/core/package.json
-420 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/custom/package.json
-421 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/gif/package.json
-422 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/jpeg/package.json
-423 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blit/package.json
-424 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blur/package.json
-425 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-circle/package.json
-426 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-color/package.json
-427 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-contain/package.json
-428 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-cover/package.json
-429 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-crop/package.json
-430 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-displace/package.json
-431 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-dither/package.json
-432 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-fisheye/package.json
-433 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-flip/package.json
-434 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-gaussian/package.json
-435 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-invert/package.json
-436 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-mask/package.json
-437 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-normalize/package.json
-438 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-print/package.json
-439 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-resize/package.json
-440 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-rotate/package.json
-441 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-scale/package.json
-442 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-shadow/package.json
-443 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-threshold/package.json
-444 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugins/package.json
-445 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/png/package.json
-446 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/tiff/package.json
-447 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/types/package.json
-448 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/utils/package.json
-449 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@sindresorhus/is/package.json
-450 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@szmarczak/http-timer/package.json
+401 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper/package.json
+402 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-bmkg/package.json
+403 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-downloader/package.json
+404 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-games/package.json
+405 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-images/package.json
+406 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-news/package.json
+407 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-others/package.json
+408 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-primbon/package.json
+409 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-religions/package.json
+410 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-sosmed/package.json
+411 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-texts/package.json
+412 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linux-x64/package.json
+413 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linuxmusl-x64/package.json
+414 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-linux-x64/package.json
+415 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@img/sharp-linuxmusl-x64/package.json
+416 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@sindresorhus/is/package.json
+417 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/bmp/package.json
+418 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/core/package.json
+419 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/custom/package.json
+420 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/gif/package.json
+421 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/jpeg/package.json
+422 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blit/package.json
+423 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blur/package.json
+424 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-circle/package.json
+425 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-color/package.json
+426 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-contain/package.json
+427 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-cover/package.json
+428 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-crop/package.json
+429 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-displace/package.json
+430 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-dither/package.json
+431 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-fisheye/package.json
+432 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-flip/package.json
+433 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-gaussian/package.json
+434 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-invert/package.json
+435 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-mask/package.json
+436 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-normalize/package.json
+437 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-print/package.json
+438 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-resize/package.json
+439 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-rotate/package.json
+440 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-scale/package.json
+441 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-shadow/package.json
+442 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-threshold/package.json
+443 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/plugins/package.json
+444 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/png/package.json
+445 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/tiff/package.json
+446 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/types/package.json
+447 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@jimp/utils/package.json
+448 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@szmarczak/http-timer/package.json
+449 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@tokenizer/token/package.json
+450 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@mapbox/node-pre-gyp/package.json
 451 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@types/cacheable-request/package.json
 452 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@types/http-cache-semantics/package.json
 453 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@types/keyv/package.json
 454 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@types/responselike/package.json
 455 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@types/signale/package.json
-456 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@tokenizer/token/package.json
+456 verbose installManyTop reading scoped package data from /home/runner/shinpei-api/node_modules/@distube/ytdl-core/package.json
 457 info package.json redstar@0.0.2 No README data
 458 info package.json tr46@0.0.3 No README data
 459 info package.json async@0.2.10 No license field.
@@ -489,16 +489,16 @@
 468 info package.json string_decoder@1.3.0 string_decoder is also the name of a node core module.
 469 info package.json ttys@0.0.3 No license field.
 470 info package.json url@0.11.4 url is also the name of a node core module.
-471 info package.json @bochilteam/scraper@4.2.4 license should be a valid SPDX license expression
-472 info package.json @bochilteam/scraper-bmkg@1.0.2 license should be a valid SPDX license expression
-473 info package.json @bochilteam/scraper-downloader@1.0.2 license should be a valid SPDX license expression
+471 info package.json @bochilteam/scraper-bmkg@1.0.2 license should be a valid SPDX license expression
+472 info package.json @bochilteam/scraper-downloader@1.0.2 license should be a valid SPDX license expression
+473 info package.json @bochilteam/scraper@4.2.4 license should be a valid SPDX license expression
 474 info package.json @bochilteam/scraper-games@1.0.2 license should be a valid SPDX license expression
 475 info package.json @bochilteam/scraper-images@1.0.2 license should be a valid SPDX license expression
 476 info package.json @bochilteam/scraper-news@1.0.2 license should be a valid SPDX license expression
 477 info package.json @bochilteam/scraper-others@1.0.2 license should be a valid SPDX license expression
-478 info package.json @bochilteam/scraper-religions@1.0.2 license should be a valid SPDX license expression
-479 info package.json @bochilteam/scraper-sosmed@1.0.5 license should be a valid SPDX license expression
-480 info package.json @bochilteam/scraper-primbon@1.0.2 license should be a valid SPDX license expression
+478 info package.json @bochilteam/scraper-primbon@1.0.2 license should be a valid SPDX license expression
+479 info package.json @bochilteam/scraper-religions@1.0.2 license should be a valid SPDX license expression
+480 info package.json @bochilteam/scraper-sosmed@1.0.5 license should be a valid SPDX license expression
 481 info package.json @bochilteam/scraper-texts@1.0.2 license should be a valid SPDX license expression
 482 info package.json @img/sharp-libvips-linux-x64@1.0.4 license should be a valid SPDX license expression
 483 info package.json @img/sharp-libvips-linuxmusl-x64@1.0.4 license should be a valid SPDX license expression
@@ -929,44 +929,44 @@
 908 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-religions/package.json
 909 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-sosmed/package.json
 910 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@bochilteam/scraper-texts/package.json
-911 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linux-x64/package.json
-912 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linuxmusl-x64/package.json
-913 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-linux-x64/package.json
-914 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-linuxmusl-x64/package.json
-915 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/bmp/package.json
-916 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/core/package.json
-917 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/custom/package.json
-918 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/gif/package.json
-919 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/jpeg/package.json
-920 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blit/package.json
-921 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blur/package.json
-922 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-circle/package.json
-923 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-color/package.json
-924 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-contain/package.json
-925 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-cover/package.json
-926 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-crop/package.json
-927 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-displace/package.json
-928 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-dither/package.json
-929 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-fisheye/package.json
-930 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-flip/package.json
-931 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-gaussian/package.json
-932 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-invert/package.json
-933 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-mask/package.json
-934 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-normalize/package.json
-935 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-print/package.json
-936 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-resize/package.json
-937 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-rotate/package.json
-938 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-scale/package.json
-939 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-shadow/package.json
-940 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-threshold/package.json
-941 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugins/package.json
-942 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/png/package.json
-943 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/tiff/package.json
-944 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/types/package.json
-945 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/utils/package.json
-946 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@mapbox/node-pre-gyp/package.json
-947 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@sindresorhus/is/package.json
-948 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@distube/ytdl-core/package.json
+911 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@distube/ytdl-core/package.json
+912 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linux-x64/package.json
+913 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-libvips-linuxmusl-x64/package.json
+914 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-linux-x64/package.json
+915 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@img/sharp-linuxmusl-x64/package.json
+916 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/bmp/package.json
+917 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/core/package.json
+918 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/custom/package.json
+919 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/gif/package.json
+920 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/jpeg/package.json
+921 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blit/package.json
+922 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-blur/package.json
+923 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-circle/package.json
+924 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-color/package.json
+925 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-contain/package.json
+926 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-cover/package.json
+927 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-crop/package.json
+928 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-displace/package.json
+929 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-dither/package.json
+930 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-fisheye/package.json
+931 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-flip/package.json
+932 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-gaussian/package.json
+933 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-invert/package.json
+934 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-mask/package.json
+935 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-normalize/package.json
+936 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-print/package.json
+937 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-resize/package.json
+938 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-rotate/package.json
+939 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-scale/package.json
+940 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-shadow/package.json
+941 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugin-threshold/package.json
+942 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/plugins/package.json
+943 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/png/package.json
+944 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/tiff/package.json
+945 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/types/package.json
+946 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@jimp/utils/package.json
+947 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@mapbox/node-pre-gyp/package.json
+948 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@sindresorhus/is/package.json
 949 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@szmarczak/http-timer/package.json
 950 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@tokenizer/token/package.json
 951 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@types/cacheable-request/package.json
@@ -974,206 +974,206 @@
 953 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@types/keyv/package.json
 954 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@types/responselike/package.json
 955 verbose targetResolver reading package data from /home/runner/shinpei-api/node_modules/@types/signale/package.json
-956 verbose already installed skipping mal-scraper@^2.13.2 /home/runner/shinpei-api
-957 verbose already installed skipping millify@^6.1.0 /home/runner/shinpei-api
-958 verbose already installed skipping moment-timezone@^0.5.45 /home/runner/shinpei-api
-959 verbose already installed skipping nexo-aio-downloader@^1.4.1 /home/runner/shinpei-api
-960 verbose already installed skipping node-fetch@^2.6.7 /home/runner/shinpei-api
-961 verbose already installed skipping ssl-express-www@^3.2.1 /home/runner/shinpei-api
-962 verbose already installed skipping unlimited-ai@^2.0.2 /home/runner/shinpei-api
-963 silly cache add args [ '@types/node@^18.0.6', null ]
-964 verbose cache add spec @types/node@^18.0.6
-965 silly cache add parsed spec Result {
-965 silly cache add   raw: '@types/node@^18.0.6',
-965 silly cache add   scope: '@types',
-965 silly cache add   name: '@types/node',
-965 silly cache add   rawSpec: '^18.0.6',
-965 silly cache add   spec: '>=18.0.6 <19.0.0',
-965 silly cache add   type: 'range'
-965 silly cache add }
-966 silly addNamed @types/node@>=18.0.6 <19.0.0
-967 verbose addNamed ">=18.0.6 <19.0.0" is a valid semver range for @types/node
-968 silly addNameRange { name: '@types/node', range: '>=18.0.6 <19.0.0', hasData: false }
-969 silly mapToRegistry name @types/node
-970 silly mapToRegistry scope (from package name) @types
-971 verbose mapToRegistry no registry URL found in name for scope @types
-972 silly mapToRegistry using default registry
-973 silly mapToRegistry registry https://registry.npmjs.org/
-974 silly mapToRegistry data Result {
-974 silly mapToRegistry   raw: '@types/node',
-974 silly mapToRegistry   scope: '@types',
-974 silly mapToRegistry   name: '@types/node',
-974 silly mapToRegistry   rawSpec: '',
-974 silly mapToRegistry   spec: 'latest',
-974 silly mapToRegistry   type: 'tag'
-974 silly mapToRegistry }
-975 silly mapToRegistry uri https://registry.npmjs.org/@types%2fnode
-976 verbose addNameRange registry:https://registry.npmjs.org/@types%2fnode not in flight; fetching
-977 verbose already installed skipping api-dylux@^1.8.5 /home/runner/shinpei-api
-978 verbose already installed skipping axios@^1.6.8 /home/runner/shinpei-api
-979 verbose already installed skipping betabotz-tools@^0.0.7 /home/runner/shinpei-api
-980 verbose already installed skipping body-parser@^1.20.3 /home/runner/shinpei-api
-981 verbose already installed skipping canvas@^2.11.2 /home/runner/shinpei-api
-982 verbose already installed skipping cheerio@^1.0.0-rc.12 /home/runner/shinpei-api
-983 verbose already installed skipping compression@^1.7.4 /home/runner/shinpei-api
-984 verbose already installed skipping cors@^2.8.5 /home/runner/shinpei-api
-985 verbose already installed skipping discord-card-canvas@^1.4.4 /home/runner/shinpei-api
-986 verbose already installed skipping duck-duck-scrape@^2.2.5 /home/runner/shinpei-api
-987 verbose already installed skipping express@^4.19.2 /home/runner/shinpei-api
-988 verbose already installed skipping fs-extra@^11.2.0 /home/runner/shinpei-api
-989 verbose already installed skipping g4f@^1.4.6 /home/runner/shinpei-api
-990 verbose request uri https://registry.npmjs.org/@types%2fnode
-991 verbose request no auth needed
-992 info attempt registry request try #1 at 7:00:24 AM
-993 verbose request id 233b1a5156c034cc
-994 verbose etag W/"33280e8ca4319da0093f1f59d508f16d"
-995 verbose lastModified Mon, 11 Nov 2024 10:07:46 GMT
-996 http request GET https://registry.npmjs.org/@types%2fnode
-997 silly cache add args [ 'helmet@latest', null ]
-998 verbose cache add spec helmet@latest
-999 verbose already installed skipping kleur@^4.1.5 /home/runner/shinpei-api
-1000 verbose already installed skipping knights-canvas@^1.3.7-a /home/runner/shinpei-api
-1001 silly cache add parsed spec Result {
-1001 silly cache add   raw: 'helmet@latest',
-1001 silly cache add   scope: null,
-1001 silly cache add   name: 'helmet',
-1001 silly cache add   rawSpec: 'latest',
-1001 silly cache add   spec: 'latest',
-1001 silly cache add   type: 'tag'
-1001 silly cache add }
-1002 silly addNamed helmet@latest
-1003 verbose addNamed "latest" is being treated as a dist-tag for helmet
-1004 info addNameTag [ 'helmet', 'latest' ]
-1005 silly mapToRegistry name helmet
-1006 silly mapToRegistry using default registry
-1007 silly mapToRegistry registry https://registry.npmjs.org/
-1008 silly mapToRegistry data Result {
-1008 silly mapToRegistry   raw: 'helmet',
-1008 silly mapToRegistry   scope: null,
-1008 silly mapToRegistry   name: 'helmet',
-1008 silly mapToRegistry   rawSpec: '',
-1008 silly mapToRegistry   spec: 'latest',
-1008 silly mapToRegistry   type: 'tag'
-1008 silly mapToRegistry }
-1009 silly mapToRegistry uri https://registry.npmjs.org/helmet
-1010 verbose addNameTag registry:https://registry.npmjs.org/helmet not in flight; fetching
-1011 verbose request uri https://registry.npmjs.org/helmet
+956 verbose already installed skipping knights-canvas@^1.3.7-a /home/runner/shinpei-api
+957 verbose already installed skipping mal-scraper@^2.13.2 /home/runner/shinpei-api
+958 verbose already installed skipping millify@^6.1.0 /home/runner/shinpei-api
+959 verbose already installed skipping moment-timezone@^0.5.45 /home/runner/shinpei-api
+960 verbose already installed skipping nexo-aio-downloader@^1.4.1 /home/runner/shinpei-api
+961 verbose already installed skipping node-fetch@^2.6.7 /home/runner/shinpei-api
+962 verbose already installed skipping ssl-express-www@^3.2.1 /home/runner/shinpei-api
+963 verbose already installed skipping unlimited-ai@^2.0.2 /home/runner/shinpei-api
+964 silly cache add args [ '@types/node@^18.0.6', null ]
+965 verbose cache add spec @types/node@^18.0.6
+966 silly cache add parsed spec Result {
+966 silly cache add   raw: '@types/node@^18.0.6',
+966 silly cache add   scope: '@types',
+966 silly cache add   name: '@types/node',
+966 silly cache add   rawSpec: '^18.0.6',
+966 silly cache add   spec: '>=18.0.6 <19.0.0',
+966 silly cache add   type: 'range'
+966 silly cache add }
+967 silly addNamed @types/node@>=18.0.6 <19.0.0
+968 verbose addNamed ">=18.0.6 <19.0.0" is a valid semver range for @types/node
+969 silly addNameRange { name: '@types/node', range: '>=18.0.6 <19.0.0', hasData: false }
+970 silly mapToRegistry name @types/node
+971 silly mapToRegistry scope (from package name) @types
+972 verbose mapToRegistry no registry URL found in name for scope @types
+973 silly mapToRegistry using default registry
+974 silly mapToRegistry registry https://registry.npmjs.org/
+975 silly mapToRegistry data Result {
+975 silly mapToRegistry   raw: '@types/node',
+975 silly mapToRegistry   scope: '@types',
+975 silly mapToRegistry   name: '@types/node',
+975 silly mapToRegistry   rawSpec: '',
+975 silly mapToRegistry   spec: 'latest',
+975 silly mapToRegistry   type: 'tag'
+975 silly mapToRegistry }
+976 silly mapToRegistry uri https://registry.npmjs.org/@types%2fnode
+977 verbose addNameRange registry:https://registry.npmjs.org/@types%2fnode not in flight; fetching
+978 verbose already installed skipping api-dylux@^1.8.5 /home/runner/shinpei-api
+979 verbose already installed skipping axios@^1.6.8 /home/runner/shinpei-api
+980 verbose already installed skipping betabotz-tools@^0.0.7 /home/runner/shinpei-api
+981 verbose already installed skipping body-parser@^1.20.3 /home/runner/shinpei-api
+982 verbose already installed skipping canvas@^2.11.2 /home/runner/shinpei-api
+983 verbose already installed skipping cheerio@^1.0.0-rc.12 /home/runner/shinpei-api
+984 verbose already installed skipping compression@^1.7.4 /home/runner/shinpei-api
+985 verbose already installed skipping cors@^2.8.5 /home/runner/shinpei-api
+986 verbose already installed skipping discord-card-canvas@^1.4.4 /home/runner/shinpei-api
+987 verbose already installed skipping duck-duck-scrape@^2.2.5 /home/runner/shinpei-api
+988 verbose already installed skipping express@^4.19.2 /home/runner/shinpei-api
+989 verbose already installed skipping fs-extra@^11.2.0 /home/runner/shinpei-api
+990 verbose already installed skipping g4f@^1.4.6 /home/runner/shinpei-api
+991 silly cache add args [ 'helmet@latest', null ]
+992 verbose cache add spec helmet@latest
+993 verbose already installed skipping kleur@^4.1.5 /home/runner/shinpei-api
+994 silly cache add parsed spec Result {
+994 silly cache add   raw: 'helmet@latest',
+994 silly cache add   scope: null,
+994 silly cache add   name: 'helmet',
+994 silly cache add   rawSpec: 'latest',
+994 silly cache add   spec: 'latest',
+994 silly cache add   type: 'tag'
+994 silly cache add }
+995 silly addNamed helmet@latest
+996 verbose addNamed "latest" is being treated as a dist-tag for helmet
+997 info addNameTag [ 'helmet', 'latest' ]
+998 silly mapToRegistry name helmet
+999 silly mapToRegistry using default registry
+1000 silly mapToRegistry registry https://registry.npmjs.org/
+1001 silly mapToRegistry data Result {
+1001 silly mapToRegistry   raw: 'helmet',
+1001 silly mapToRegistry   scope: null,
+1001 silly mapToRegistry   name: 'helmet',
+1001 silly mapToRegistry   rawSpec: '',
+1001 silly mapToRegistry   spec: 'latest',
+1001 silly mapToRegistry   type: 'tag'
+1001 silly mapToRegistry }
+1002 silly mapToRegistry uri https://registry.npmjs.org/helmet
+1003 verbose addNameTag registry:https://registry.npmjs.org/helmet not in flight; fetching
+1004 verbose request uri https://registry.npmjs.org/helmet
+1005 verbose request no auth needed
+1006 info attempt registry request try #1 at 7:13:16 AM
+1007 verbose request id 3accbb7198215cec
+1008 verbose etag W/"a60c8a2813279c8347e11b127dfe1324"
+1009 verbose lastModified Sat, 28 Sep 2024 22:39:06 GMT
+1010 http request GET https://registry.npmjs.org/helmet
+1011 verbose request uri https://registry.npmjs.org/@types%2fnode
 1012 verbose request no auth needed
-1013 info attempt registry request try #1 at 7:00:24 AM
-1014 verbose etag W/"a60c8a2813279c8347e11b127dfe1324"
-1015 verbose lastModified Sat, 28 Sep 2024 22:39:06 GMT
-1016 http request GET https://registry.npmjs.org/helmet
-1017 http 304 https://registry.npmjs.org/@types%2fnode
+1013 info attempt registry request try #1 at 7:13:16 AM
+1014 verbose etag W/"33280e8ca4319da0093f1f59d508f16d"
+1015 verbose lastModified Mon, 11 Nov 2024 10:07:46 GMT
+1016 http request GET https://registry.npmjs.org/@types%2fnode
+1017 http 304 https://registry.npmjs.org/helmet
 1018 verbose headers {
-1018 verbose headers   date: 'Tue, 12 Nov 2024 07:00:24 GMT',
+1018 verbose headers   date: 'Thu, 14 Nov 2024 07:13:16 GMT',
 1018 verbose headers   connection: 'keep-alive',
-1018 verbose headers   'cf-ray': '8e14a5158cdc53bc-ATL',
+1018 verbose headers   'cf-ray': '8e2532b06abebcf5-ATL',
 1018 verbose headers   'cf-cache-status': 'HIT',
 1018 verbose headers   'access-control-allow-origin': '*',
-1018 verbose headers   age: '188',
+1018 verbose headers   age: '174',
 1018 verbose headers   'cache-control': 'public, max-age=300',
-1018 verbose headers   etag: '"33280e8ca4319da0093f1f59d508f16d"',
-1018 verbose headers   'last-modified': 'Mon, 11 Nov 2024 10:07:46 GMT',
+1018 verbose headers   etag: '"a60c8a2813279c8347e11b127dfe1324"',
+1018 verbose headers   'last-modified': 'Sat, 28 Sep 2024 22:39:06 GMT',
 1018 verbose headers   vary: 'Accept-Encoding',
 1018 verbose headers   server: 'cloudflare'
 1018 verbose headers }
 1019 silly get cb [
 1019 silly get   304,
 1019 silly get   {
-1019 silly get     date: 'Tue, 12 Nov 2024 07:00:24 GMT',
+1019 silly get     date: 'Thu, 14 Nov 2024 07:13:16 GMT',
 1019 silly get     connection: 'keep-alive',
-1019 silly get     'cf-ray': '8e14a5158cdc53bc-ATL',
+1019 silly get     'cf-ray': '8e2532b06abebcf5-ATL',
 1019 silly get     'cf-cache-status': 'HIT',
 1019 silly get     'access-control-allow-origin': '*',
-1019 silly get     age: '188',
+1019 silly get     age: '174',
 1019 silly get     'cache-control': 'public, max-age=300',
-1019 silly get     etag: '"33280e8ca4319da0093f1f59d508f16d"',
-1019 silly get     'last-modified': 'Mon, 11 Nov 2024 10:07:46 GMT',
+1019 silly get     etag: '"a60c8a2813279c8347e11b127dfe1324"',
+1019 silly get     'last-modified': 'Sat, 28 Sep 2024 22:39:06 GMT',
 1019 silly get     vary: 'Accept-Encoding',
 1019 silly get     server: 'cloudflare'
 1019 silly get   }
 1019 silly get ]
-1020 verbose etag https://registry.npmjs.org/@types%2fnode from cache
-1021 verbose get saving @types/node to /home/runner/.npm/registry.npmjs.org/_40types_252fnode/.cache.json
+1020 verbose etag https://registry.npmjs.org/helmet from cache
+1021 verbose get saving helmet to /home/runner/.npm/registry.npmjs.org/helmet/.cache.json
 1022 verbose correctMkdir /home/runner/.npm correctMkdir not in flight; initializing
-1023 http 304 https://registry.npmjs.org/helmet
-1024 verbose headers {
-1024 verbose headers   date: 'Tue, 12 Nov 2024 07:00:24 GMT',
-1024 verbose headers   connection: 'keep-alive',
-1024 verbose headers   'cf-ray': '8e14a5159bd653d5-ATL',
-1024 verbose headers   'cf-cache-status': 'HIT',
-1024 verbose headers   'access-control-allow-origin': '*',
-1024 verbose headers   age: '90',
-1024 verbose headers   'cache-control': 'public, max-age=300',
-1024 verbose headers   etag: '"a60c8a2813279c8347e11b127dfe1324"',
-1024 verbose headers   'last-modified': 'Sat, 28 Sep 2024 22:39:06 GMT',
-1024 verbose headers   vary: 'Accept-Encoding',
-1024 verbose headers   server: 'cloudflare'
-1024 verbose headers }
-1025 silly get cb [
-1025 silly get   304,
-1025 silly get   {
-1025 silly get     date: 'Tue, 12 Nov 2024 07:00:24 GMT',
-1025 silly get     connection: 'keep-alive',
-1025 silly get     'cf-ray': '8e14a5159bd653d5-ATL',
-1025 silly get     'cf-cache-status': 'HIT',
-1025 silly get     'access-control-allow-origin': '*',
-1025 silly get     age: '90',
-1025 silly get     'cache-control': 'public, max-age=300',
-1025 silly get     etag: '"a60c8a2813279c8347e11b127dfe1324"',
-1025 silly get     'last-modified': 'Sat, 28 Sep 2024 22:39:06 GMT',
-1025 silly get     vary: 'Accept-Encoding',
-1025 silly get     server: 'cloudflare'
-1025 silly get   }
-1025 silly get ]
-1026 verbose etag https://registry.npmjs.org/helmet from cache
-1027 verbose get saving helmet to /home/runner/.npm/registry.npmjs.org/helmet/.cache.json
-1028 verbose correctMkdir /home/runner/.npm correctMkdir already in flight; waiting
-1029 silly addNameTag next cb for helmet with tag latest
-1030 silly addNamed helmet@8.0.0
-1031 verbose addNamed "8.0.0" is a plain semver version for helmet
-1032 silly addNameRange number 2 { name: '@types/node', range: '>=18.0.6 <19.0.0', hasData: true }
-1033 silly addNameRange versions [
-1033 silly addNameRange   '@types/node',
-1033 silly addNameRange   [
-1033 silly addNameRange     '4.0.15-alpha', '4.0.16-alpha', '4.0.21-alpha', '4.0.22-alpha',
-1033 silly addNameRange     '4.0.23-alpha', '4.0.24-alpha', '4.0.25-alpha', '4.0.26-alpha',
-1033 silly addNameRange     '4.0.27-alpha', '4.0.28-alpha', '4.0.29',       '4.0.30',
-1033 silly addNameRange     '6.0.31',       '6.0.32',       '6.0.33',       '6.0.34',
-1033 silly addNameRange     '6.0.35',       '6.0.36',       '6.0.37',       '6.0.38',
-1033 silly addNameRange     '6.0.39',       '6.0.40',       '6.0.41',       '6.0.42',
-1033 silly addNameRange     '6.0.43',       '6.0.44',       '6.0.45',       '6.0.46',
-1033 silly addNameRange     '6.0.47',       '6.0.48',       '6.0.49',       '6.0.50',
-1033 silly addNameRange     '6.0.51',       '0.0.0',        '0.0.1',        '0.0.2',
-1033 silly addNameRange     '0.0.3',        '6.0.52',       '6.0.53',       '6.0.54',
-1033 silly addNameRange     '6.0.55',       '6.0.56',       '6.0.57',       '6.0.58',
-1033 silly addNameRange     '6.0.59',       '4.2.0',        '0.12.0',       '7.0.0',
-1033 silly addNameRange     '6.0.60',       '7.0.1',        '6.0.61',       '7.0.2',
-1033 silly addNameRange     '7.0.3',        '7.0.4',        '4.2.1',        '6.0.62',
-1033 silly addNameRange     '7.0.5',        '6.0.63',       '4.2.2',        '0.12.1',
-1033 silly addNameRange     '4.2.3',        '6.0.64',       '7.0.6',        '6.0.65',
-1033 silly addNameRange     '7.0.7',        '7.0.8',        '4.2.4',        '0.12.2',
-1033 silly addNameRange     '6.0.66',       '7.0.9',        '7.0.10',       '7.0.11',
-1033 silly addNameRange     '6.0.67',       '6.0.68',       '7.0.12',       '4.2.5',
-1033 silly addNameRange     '0.12.3',       '6.0.69',       '0.12.4',       '4.2.6',
-1033 silly addNameRange     '6.0.70',       '7.0.13',       '7.0.14',       '6.0.71',
-1033 silly addNameRange     '7.0.15',       '4.2.7',        '6.0.72',       '7.0.16',
-1033 silly addNameRange     '7.0.17',       '7.0.18',       '4.2.8',        '6.0.73',
-1033 silly addNameRange     '7.0.19',       '7.0.20',       '7.0.21',       '7.0.22',
-1033 silly addNameRange     '6.0.74',       '7.0.23',       '7.0.24',       '6.0.75',
-1033 silly addNameRange     ... 1859 more items
-1033 silly addNameRange   ]
-1033 silly addNameRange ]
-1034 silly addNamed @types/node@18.19.64
-1035 verbose addNamed "18.19.64" is a plain semver version for @types/node
-1036 silly cache afterAdd helmet@8.0.0
-1037 verbose afterAdd /home/runner/.npm/helmet/8.0.0/package/package.json not in flight; writing
-1038 verbose correctMkdir /home/runner/.npm correctMkdir not in flight; initializing
-1039 silly cache afterAdd @types/node@18.19.64
-1040 verbose afterAdd /home/runner/.npm/@types/node/18.19.64/package/package.json not in flight; writing
-1041 verbose correctMkdir /home/runner/.npm correctMkdir not in flight; initializing
-1042 verbose afterAdd /home/runner/.npm/helmet/8.0.0/package/package.json written
-1043 info already installed helmet@8.0.0
+1023 silly addNameTag next cb for helmet with tag latest
+1024 silly addNamed helmet@8.0.0
+1025 verbose addNamed "8.0.0" is a plain semver version for helmet
+1026 silly cache afterAdd helmet@8.0.0
+1027 verbose afterAdd /home/runner/.npm/helmet/8.0.0/package/package.json not in flight; writing
+1028 verbose correctMkdir /home/runner/.npm correctMkdir not in flight; initializing
+1029 verbose afterAdd /home/runner/.npm/helmet/8.0.0/package/package.json written
+1030 info already installed helmet@8.0.0
+1031 http 304 https://registry.npmjs.org/@types%2fnode
+1032 verbose headers {
+1032 verbose headers   date: 'Thu, 14 Nov 2024 07:13:16 GMT',
+1032 verbose headers   connection: 'keep-alive',
+1032 verbose headers   'cf-ray': '8e2532b07fa644dd-ATL',
+1032 verbose headers   'cf-cache-status': 'HIT',
+1032 verbose headers   'access-control-allow-origin': '*',
+1032 verbose headers   age: '32',
+1032 verbose headers   'cache-control': 'public, max-age=300',
+1032 verbose headers   etag: '"33280e8ca4319da0093f1f59d508f16d"',
+1032 verbose headers   'last-modified': 'Mon, 11 Nov 2024 10:07:46 GMT',
+1032 verbose headers   vary: 'Accept-Encoding',
+1032 verbose headers   server: 'cloudflare'
+1032 verbose headers }
+1033 silly get cb [
+1033 silly get   304,
+1033 silly get   {
+1033 silly get     date: 'Thu, 14 Nov 2024 07:13:16 GMT',
+1033 silly get     connection: 'keep-alive',
+1033 silly get     'cf-ray': '8e2532b07fa644dd-ATL',
+1033 silly get     'cf-cache-status': 'HIT',
+1033 silly get     'access-control-allow-origin': '*',
+1033 silly get     age: '32',
+1033 silly get     'cache-control': 'public, max-age=300',
+1033 silly get     etag: '"33280e8ca4319da0093f1f59d508f16d"',
+1033 silly get     'last-modified': 'Mon, 11 Nov 2024 10:07:46 GMT',
+1033 silly get     vary: 'Accept-Encoding',
+1033 silly get     server: 'cloudflare'
+1033 silly get   }
+1033 silly get ]
+1034 verbose etag https://registry.npmjs.org/@types%2fnode from cache
+1035 verbose get saving @types/node to /home/runner/.npm/registry.npmjs.org/_40types_252fnode/.cache.json
+1036 verbose correctMkdir /home/runner/.npm correctMkdir not in flight; initializing
+1037 silly addNameRange number 2 { name: '@types/node', range: '>=18.0.6 <19.0.0', hasData: true }
+1038 silly addNameRange versions [
+1038 silly addNameRange   '@types/node',
+1038 silly addNameRange   [
+1038 silly addNameRange     '4.0.15-alpha', '4.0.16-alpha', '4.0.21-alpha', '4.0.22-alpha',
+1038 silly addNameRange     '4.0.23-alpha', '4.0.24-alpha', '4.0.25-alpha', '4.0.26-alpha',
+1038 silly addNameRange     '4.0.27-alpha', '4.0.28-alpha', '4.0.29',       '4.0.30',
+1038 silly addNameRange     '6.0.31',       '6.0.32',       '6.0.33',       '6.0.34',
+1038 silly addNameRange     '6.0.35',       '6.0.36',       '6.0.37',       '6.0.38',
+1038 silly addNameRange     '6.0.39',       '6.0.40',       '6.0.41',       '6.0.42',
+1038 silly addNameRange     '6.0.43',       '6.0.44',       '6.0.45',       '6.0.46',
+1038 silly addNameRange     '6.0.47',       '6.0.48',       '6.0.49',       '6.0.50',
+1038 silly addNameRange     '6.0.51',       '0.0.0',        '0.0.1',        '0.0.2',
+1038 silly addNameRange     '0.0.3',        '6.0.52',       '6.0.53',       '6.0.54',
+1038 silly addNameRange     '6.0.55',       '6.0.56',       '6.0.57',       '6.0.58',
+1038 silly addNameRange     '6.0.59',       '4.2.0',        '0.12.0',       '7.0.0',
+1038 silly addNameRange     '6.0.60',       '7.0.1',        '6.0.61',       '7.0.2',
+1038 silly addNameRange     '7.0.3',        '7.0.4',        '4.2.1',        '6.0.62',
+1038 silly addNameRange     '7.0.5',        '6.0.63',       '4.2.2',        '0.12.1',
+1038 silly addNameRange     '4.2.3',        '6.0.64',       '7.0.6',        '6.0.65',
+1038 silly addNameRange     '7.0.7',        '7.0.8',        '4.2.4',        '0.12.2',
+1038 silly addNameRange     '6.0.66',       '7.0.9',        '7.0.10',       '7.0.11',
+1038 silly addNameRange     '6.0.67',       '6.0.68',       '7.0.12',       '4.2.5',
+1038 silly addNameRange     '0.12.3',       '6.0.69',       '0.12.4',       '4.2.6',
+1038 silly addNameRange     '6.0.70',       '7.0.13',       '7.0.14',       '6.0.71',
+1038 silly addNameRange     '7.0.15',       '4.2.7',        '6.0.72',       '7.0.16',
+1038 silly addNameRange     '7.0.17',       '7.0.18',       '4.2.8',        '6.0.73',
+1038 silly addNameRange     '7.0.19',       '7.0.20',       '7.0.21',       '7.0.22',
+1038 silly addNameRange     '6.0.74',       '7.0.23',       '7.0.24',       '6.0.75',
+1038 silly addNameRange     ... 1859 more items
+1038 silly addNameRange   ]
+1038 silly addNameRange ]
+1039 silly addNamed @types/node@18.19.64
+1040 verbose addNamed "18.19.64" is a plain semver version for @types/node
+1041 silly cache afterAdd @types/node@18.19.64
+1042 verbose afterAdd /home/runner/.npm/@types/node/18.19.64/package/package.json not in flight; writing
+1043 verbose correctMkdir /home/runner/.npm correctMkdir not in flight; initializing
 1044 verbose afterAdd /home/runner/.npm/@types/node/18.19.64/package/package.json written
 1045 silly install resolved [
 1045 silly install resolved   {
