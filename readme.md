@@ -1,5 +1,3 @@
----
-
 # Open Source REST API  
 Created by **Lance Ajiro**  
 
@@ -54,6 +52,4 @@ exports.initialize = async function ({ req, res }) {
 
 ---
 
-Feel free to contribute and improve this project. Happy coding!  
-
---- 
+Feel free to contribute and improve this project. Happy coding!
