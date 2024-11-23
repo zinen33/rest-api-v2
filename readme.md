@@ -1,4 +1,4 @@
-# A Open Source API 
+# A Open Source Rest API 
 Made by Lance Ajiro
 
 # Add API
@@ -19,4 +19,4 @@ exports.initialize = async function ({ req, res }) {
 ```
 
 # Note
-You don't need to add the API link in the html because it will be automatically show in website
+You don't need to add the API link in the html because it will be automatically show in website and don't forget to give me a star when you're going to fork
