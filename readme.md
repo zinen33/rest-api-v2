@@ -1,5 +1,5 @@
-# Setup
-Edit the information in the config.json
+# A Open Source API 
+Made by Lance Ajiro
 
 # Add API
 
