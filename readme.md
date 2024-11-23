@@ -32,7 +32,7 @@ exports.config = {
     author: 'Lance Ajiro',
     description: 'Returns a Hello World message',
     category: 'example',
-    link: ['/hello']
+    link: ['/helloWorld']
 };
 
 exports.initialize = async function ({ req, res }) {
