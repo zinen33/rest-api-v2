@@ -267,19 +267,34 @@
         });
     }
 
-    function filterApis(searchTerm) {
-        return apiList.filter(api =>
-            api.name.toLowerCase().includes(searchTerm) ||
-            api.description.toLowerCase().includes(searchTerm)
-        );
-    }
+        function filterApis(searchTerm) {
+            return apiList.filter(api =>
+                api.name.toLowerCase().includes(searchTerm) ||
+                api.description.toLowerCase().includes(searchTerm) ||
+                api.category.toLowerCase().includes(searchTerm)
+            );
+        }
 
-    const searchInput = document.getElementById('apiSearch');
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const filteredApis = filterApis(searchTerm);
-        renderCategories(filteredApis);
-    });
+        const searchInput = document.getElementById('apiSearch');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredApis = filterApis(searchTerm);
+            renderCategories(filteredApis);
+
+            // Automatically open categories with matching results
+            if (searchTerm) {
+                document.querySelectorAll('#sidebarNav > div').forEach(categoryDiv => {
+                    const endpointsDiv = categoryDiv.querySelector('div:last-child');
+                    const hasMatch = Array.from(endpointsDiv.children).some(child => 
+                        child.textContent.toLowerCase().includes(searchTerm)
+                    );
+                    if (hasMatch) {
+                        endpointsDiv.classList.remove('hidden');
+                        categoryDiv.querySelector('button svg').classList.add('rotate-180');
+                    }
+                });
+            }
+        });
 
     // Initial fetch and render
     fetchApiList();
