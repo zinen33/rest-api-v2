@@ -53,10 +53,16 @@
         <!-- Sidebar -->
         <div id="sidebar" class="fixed inset-y-0 left-0 z-50 w-80 transform overflow-y-auto bg-[#0c0c0c] transition-all duration-300 ease-in-out -translate-x-full md:relative md:translate-x-0 border-r border-[#1e1e1e]">
             <div class="flex h-full flex-col">
-                <div class="flex items-center justify-between p-4 border-b border-[#1e1e1e] h-14">
-                    <h2 id="sidebarTitle" class="text-sm font-medium text-white">API Dashboard Pro</h2>
+                <div class="flex flex-col">
+                    <div class="flex items-center justify-between p-4 h-16">
+                        <h2 id="sidebarTitle" class="text-sm font-medium text-white flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brackets mr-2"><path d="M16 3h3v18h-3"></path><path d="M8 21H5V3h3"></path></svg>
+                            <span id="sidebarTitleText">API Dashboard Pro</span>
+                        </h2>
+                    </div>
+                    <div class="h-[1px] bg-[#1e1e1e] w-full"></div>
                 </div>
-                <div class="px-3 py-3">
+                <div class="px-4 py-4">
                     <div class="relative">
                         <input
                             type="search"
@@ -78,20 +84,23 @@
         <!-- Main content -->
         <div class="relative flex flex-1 flex-col overflow-y-auto bg-[#09090b]">
             <!-- Header -->
-            <header class="sticky top-0 z-40 bg-[#09090b] border-b border-[#1e1e1e]">
+            <header class="sticky top-0 z-40 bg-[#09090b]">
                 <div class="container mx-auto">
-                    <div class="flex h-14 items-center justify-between px-4">
-                        <button id="toggleSidebar" class="md:hidden text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-blue-500 p-2 rounded-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16" />
-                            </svg>
-                        </button>
-                        <div id="greeting" class="text-sm font-medium text-gray-200"></div>
-                        <button id="showNotifications" class="text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-blue-500 p-2 rounded-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                            </svg>
-                        </button>
+                    <div class="flex flex-col">
+                        <div class="flex h-16 items-center justify-between px-4">
+                            <button id="toggleSidebar" class="md:hidden text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-blue-500 p-2 rounded-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16" />
+                                </svg>
+                            </button>
+                            <div id="greeting" class="text-sm font-medium text-gray-200"></div>
+                            <button id="showNotifications" class="text-gray-400 hover:text-white focus:outline-none focus:ring-1 focus:ring-blue-500 p-2 rounded-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="h-[1px] bg-[#1e1e1e] w-full"></div>
                     </div>
                 </div>
             </header>
@@ -417,7 +426,7 @@
         document.title = config.title || 'API Dashboard Pro';
 
         // Update sidebar title
-        document.getElementById('sidebarTitle').textContent = config.title || 'API Dashboard Pro';
+        document.getElementById('sidebarTitleText').textContent = config.title || 'API Dashboard Pro';
 
         // Update welcome popup title
         document.getElementById('welcomeTitle').textContent = `Welcome to ${config.title || 'API Dashboard Pro'}!`;
