@@ -1,3 +1,15 @@
 {
-  "port": "8080"
+  "port": "8080",
+  "title": "Ajiro API",
+  "favicon": "/path/to/your/favicon.ico",
+  "notifications": [
+    {
+      "title": "New UI",
+      "description": "We updated our UI to get cooler experience"
+    },
+    {
+      "title": "New Design",
+      "description": "We updated our design to get cooler experience"
+    }
+  ]
 }

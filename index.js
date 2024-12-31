@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const log = require("./includes/log");
 const config = require("./config.json");
+const fs = require('fs');
 
 // Initialize global config
 global.config = config;
@@ -61,7 +62,32 @@ app.use(bodyParser.urlencoded({
   limit: '10mb'
 }));
 
-// API endpoints
+function readConfig() {
+  try {
+    const configPath = path.join(__dirname, 'config.json');
+    const configData = fs.readFileSync(configPath, 'utf8');
+    return JSON.parse(configData);
+  } catch (error) {
+    console.error('Error reading config.json:', error);
+    return {};
+  }
+}
+
+app.get("/", (req, res) => {
+  try {
+    const config = readConfig();
+    let html = fs.readFileSync(path.join(__dirname, "includes", "public", "index.html"), 'utf8');
+
+    // Inject configuration into HTML
+    html = html.replace('</head>', `<script>window.appConfig = ${JSON.stringify(config)};</script></head>`);
+
+    res.send(html);
+  } catch (error) {
+    log.error('Error serving index page:', error);
+    res.status(500).send('Internal server error');
+  }
+});
+
 app.get("/api-list", (req, res) => {
   try {
     const apiList = Array.from(global.api.values()).map(api => ({
@@ -70,7 +96,8 @@ app.get("/api-list", (req, res) => {
       endpoint: `api${api.config.link}`,
       category: api.config.category
     }));
-    res.json(apiList);
+    const config = readConfig();
+    res.json({ apis: apiList, config });
   } catch (error) {
     log.error('Error generating API list:', error);
     res.status(500).json({ 
