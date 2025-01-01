@@ -1,49 +1,42 @@
 const express = require("express");
 const secure = require('ssl-express-www');
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const path = require("path");
 const helmet = require('helmet');
 const compression = require('compression');
 const log = require("./includes/log");
-const config = require("./config.json");
 const fs = require('fs');
 
-// Initialize global config
-global.config = config;
+// Read and cache configuration
+const readConfig = () => {
+  try {
+    const configPath = path.join(__dirname, 'config.json');
+    return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  } catch (error) {
+    console.error('Error reading config.json:', error);
+    return {};
+  }
+};
+
+global.config = readConfig();
 global.api = new Map();
 
-// Initialize Express app
 const app = express();
 
-// Security middleware
-app.use(helmet({
-  contentSecurityPolicy: false, // Disable if you need to load external resources
-  crossOriginEmbedderPolicy: false // Disable if you need to load external resources
-}));
-
-// Performance middleware
+// Security and performance middleware
+app.use(secure);
+app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
 app.use(compression());
 
-// Essential middleware
+// Parsing and static file serving
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
-app.use(express.static(path.join(__dirname, 'includes', 'public'), {
-  maxAge: '1d',
-  etag: true
-}));
-app.use(express.static(path.join(__dirname, 'includes', 'web'), {
-  maxAge: '1d',
-  etag: true
-}));
+app.use(express.static(path.join(__dirname, 'includes', 'public'), { maxAge: '1d', etag: true }));
+app.use(express.static(path.join(__dirname, 'includes', 'assets'), { maxAge: '1d', etag: true }));
 
 // Router setup
 const router = require("./includes/router");
 app.use(router);
-
-// Server configuration
-app.enable('trust proxy');
-app.set("json spaces", 2);
 
 // CORS configuration
 app.use(cors({
@@ -52,35 +45,11 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// SSL redirect
-app.use(secure);
-
-// Body parser setup with limits
-app.use(bodyParser.json({ limit: '10mb' }));
-app.use(bodyParser.urlencoded({ 
-  extended: true,
-  limit: '10mb'
-}));
-
-function readConfig() {
-  try {
-    const configPath = path.join(__dirname, 'config.json');
-    const configData = fs.readFileSync(configPath, 'utf8');
-    return JSON.parse(configData);
-  } catch (error) {
-    console.error('Error reading config.json:', error);
-    return {};
-  }
-}
-
+// Routes
 app.get("/", (req, res) => {
   try {
-    const config = readConfig();
-    let html = fs.readFileSync(path.join(__dirname, "includes", "public", "index.html"), 'utf8');
-
-    // Inject configuration into HTML
-    html = html.replace('</head>', `<script>window.appConfig = ${JSON.stringify(config)};</script></head>`);
-
+    let html = fs.readFileSync(path.join(__dirname, "includes", "public", "portal.html"), 'utf8');
+    html = html.replace('</head>', `<script>window.appConfig = ${JSON.stringify(global.config)};</script></head>`);
     res.send(html);
   } catch (error) {
     log.error('Error serving index page:', error);
@@ -96,23 +65,18 @@ app.get("/api-list", (req, res) => {
       endpoint: `api${api.config.link}`,
       category: api.config.category
     }));
-    const config = readConfig();
-    res.json({ apis: apiList, config });
+    res.json({ apis: apiList, config: global.config });
   } catch (error) {
     log.error('Error generating API list:', error);
-    res.status(500).json({ 
-      error: 'Internal server error',
-      message: 'Failed to generate API list'
-    });
+    res.status(500).json({ error: 'Internal server error', message: 'Failed to generate API list' });
   }
 });
 
-// Main route
-app.get("/", (req, res) => {
+app.get("/docs", (req, res) => {
   try {
-    res.sendFile(path.join(__dirname, "includes", "public", "index.html"));
+    res.sendFile(path.join(__dirname, "includes", "public", "docs.html"));
   } catch (error) {
-    log.error('Error serving index page:', error);
+    log.error('Error serving docs page:', error);
     res.status(500).send('Internal server error');
   }
 });
@@ -130,20 +94,14 @@ app.use((req, res) => {
 // Error handler
 app.use((err, req, res, next) => {
   log.error('Server error:', err);
-  res.status(500).json({
-    error: 'Internal server error',
-    message: process.env.NODE_ENV === 'production' ? 'An error occurred' : err.message
-  });
+  res.status(500).json({ error: 'Internal server error', message: err.message });
 });
 
 // Server initialization
 const PORT = process.env.PORT || global.config.port || 3000;
+const server = app.listen(PORT, () => log.main(`Server is running on port ${PORT}`));
 
-const server = app.listen(PORT, () => {
-  log.main(`Server is running on port ${PORT}`);
-});
-
-// Graceful shutdown handling
+// Graceful shutdown
 process.on('SIGTERM', () => {
   log.main('SIGTERM signal received: closing HTTP server');
   server.close(() => {
@@ -155,9 +113,7 @@ process.on('SIGTERM', () => {
 // Uncaught exception handler
 process.on('uncaughtException', (error) => {
   log.error('Uncaught Exception:', error);
-  server.close(() => {
-    process.exit(1);
-  });
+  server.close(() => process.exit(1));
 });
 
 // Unhandled rejection handler

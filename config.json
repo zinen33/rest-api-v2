@@ -1,7 +1,8 @@
 {
   "port": "8080",
   "title": "Ajiro API",
-  "favicon": "/path/to/your/favicon.ico",
+  "title2": "Ajiro Rest API",
+  "favicon": "https://i.ibb.co/XYk4dXn/image.png",
   "notifications": [
     {
       "title": "New UI",
