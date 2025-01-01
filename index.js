@@ -23,6 +23,21 @@ global.api = new Map();
 
 const app = express();
 
+// Pretty-print middleware
+app.set('json spaces', 2); // Enable pretty-printing for JSON responses
+
+// Override express response.json to always pretty print
+app.use((req, res, next) => {
+  const originalJson = res.json;
+  res.json = function(body) {
+    if (body && typeof body === 'object') {
+      return originalJson.call(this, body, null, 2);
+    }
+    return originalJson.call(this, body);
+  };
+  next();
+});
+
 // Security and performance middleware
 app.use(secure);
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
@@ -49,7 +64,7 @@ app.use(cors({
 app.get("/", (req, res) => {
   try {
     let html = fs.readFileSync(path.join(__dirname, "includes", "public", "portal.html"), 'utf8');
-    html = html.replace('</head>', `<script>window.appConfig = ${JSON.stringify(global.config)};</script></head>`);
+    html = html.replace('</head>', `<script>window.appConfig = ${JSON.stringify(global.config, null, 2)};</script></head>`);
     res.send(html);
   } catch (error) {
     log.error('Error serving index page:', error);
@@ -68,7 +83,10 @@ app.get("/api-list", (req, res) => {
     res.json({ apis: apiList, config: global.config });
   } catch (error) {
     log.error('Error generating API list:', error);
-    res.status(500).json({ error: 'Internal server error', message: 'Failed to generate API list' });
+    res.status(500).json({ 
+      error: 'Internal server error', 
+      message: 'Failed to generate API list' 
+    });
   }
 });
 
@@ -87,14 +105,20 @@ app.use((req, res) => {
     res.status(404).sendFile(path.join(__dirname, "includes", "public", "404.html"));
   } catch (error) {
     log.error('Error serving 404 page:', error);
-    res.status(404).send('Page not found');
+    res.status(404).json({
+      error: 'Not Found',
+      message: 'Page not found'
+    });
   }
 });
 
 // Error handler
 app.use((err, req, res, next) => {
   log.error('Server error:', err);
-  res.status(500).json({ error: 'Internal server error', message: err.message });
+  res.status(500).json({
+    error: 'Internal server error',
+    message: err.message
+  });
 });
 
 // Server initialization
