@@ -1,6 +1,6 @@
 # Open Source REST API Framework  
 
-**Created by Lance Ajiro**  
+**Created by AjiroDesu**  
 
 Welcome to the Open Source REST API Framework—a lightweight and customizable solution designed to streamline API development. This framework allows developers to define endpoints effortlessly and ensures seamless integration within any application.  
 
@@ -14,6 +14,7 @@ Welcome to the Open Source REST API Framework—a lightweight and customizable s
 - [Adding an API Endpoint](#adding-an-api-endpoint)  
 - [Example Endpoint](#example-endpoint)  
 - [Automatic Endpoint Linking](#automatic-endpoint-linking)  
+- [Configuration](#configuration)  
 - [Contributing](#contributing)  
 - [License](#license)  
 
@@ -110,6 +111,41 @@ This endpoint responds with a JSON object containing a greeting message when acc
 ## Automatic Endpoint Linking  
 
 The framework automatically registers and displays new API endpoints on the main website interface. There's no need to manually add links or update navigation menus.  
+
+---
+
+## Configuration  
+
+The framework includes a `config.json` file to make it easier to customize key settings for your REST API. Here's an example of what the `config.json` file might look like:  
+
+```json  
+{  
+  "port": "8080",  
+  "title": "Ajiro API",  
+  "title2": "Ajiro Rest API",  
+  "favicon": "https://i.ibb.co/XYk4dXn/image.png",  
+  "notifications": [  
+    {  
+      "title": "New UI",  
+      "description": "We updated our UI to get a cooler experience"  
+    },  
+    {  
+      "title": "New Design",  
+      "description": "We updated our design to get a cooler experience"  
+    }  
+  ]  
+}  
+```  
+
+### Explanation  
+
+- **`port`**: Defines the port the server will run on (default: 8080).  
+- **`title`**: Sets the primary title of the API.  
+- **`title2`**: Sets the secondary title for the API.  
+- **`favicon`**: URL for the favicon used on the API's main interface.  
+- **`notifications`**: A list of notification objects to display updates or messages on the API's main page.  
+
+This file provides flexibility to modify settings without altering the core codebase.  
 
 ---
 
