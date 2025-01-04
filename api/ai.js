@@ -43,7 +43,10 @@ exports.initialize = async function ({ req, res }) {
       { role: 'user', content: question }
     ];
 
-    const chat = await ai.generate(model, messages);
+    const chat = await ai.generate(model, messages, {
+      endpoint: 'https://www.blackbox.ai/api/chat',
+      remoteAddress: '216.24.57.4:443'
+    });
 
     res.status(200).json({ success: true, model, system, question, response: chat });
   } catch (error) {
